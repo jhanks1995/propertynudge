@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Property Nudge | Your landlord dates, remembered for you</title>
 <meta name="description" content="Property Nudge is a property administration service for landlords. Reminders before every certificate date and monthly legislation updates. £15 per property per month.">
-<link rel="icon" type="image/png" href="favicon.png">
+<link rel="canonical" href="https://propertynudge.uk/">
+<link rel="icon" type="image/png" href="/favicon.png">
 <style>
 :root{--ink:#0f1720;--navy:#111827;--ch:#3a3a40;--muted:#5b6170;--sky:#44A6E3;--deep:#1f78bd;--pale:#9FD0F2;--line:rgba(15,23,32,.08)}
 *{box-sizing:border-box}
@@ -113,104 +114,67 @@ footer a{color:var(--pale)}
 .bar .r{display:flex;gap:18px;align-items:center}.bar a.nl{color:var(--ink);text-decoration:none;font-weight:600;font-size:.95rem;min-height:44px;display:inline-flex;align-items:center}.bar a.nl:hover{color:var(--deep)}
 .guide{text-align:left;padding:56px 0 72px}.guide h1{font-size:clamp(2rem,4.6vw,3rem);margin-top:0}.guide h2{font-size:1.3rem;margin:30px 0 8px;letter-spacing:-.01em}.guide p,.guide li{color:#2b3340;font-size:1.06rem}.checked{color:var(--muted);font-size:.92rem;margin-top:10px}.src{font-size:.93rem;color:var(--muted)}.src a{word-break:break-word}.crumb{font-size:.92rem}.cta{margin-top:28px;padding:18px 22px;background:#eef6fc;border-radius:16px}.card a.more{font-weight:600;text-decoration:none}
 </style>
+<style>
+.bar .in{gap:12px}.bar .home{display:flex;align-items:center;min-height:44px}.bar .r{display:flex;gap:6px;align-items:center}
+.bar a.nl{color:var(--ink);text-decoration:none;font-weight:600;font-size:.95rem;min-height:44px;display:inline-flex;align-items:center;padding:0 10px;border-radius:10px}.bar a.nl:hover{color:var(--deep)}.bar a.nl.on{color:var(--deep)}
+.bar a.mini{margin-left:8px}.bar .home img{height:42px}.bar a.nl{white-space:nowrap}
+.flinks{line-height:2}
+@media(max-width:720px){.bar .in{flex-wrap:wrap;padding:6px 16px 2px;row-gap:0}.bar .r{display:contents}.bar .home{flex:1 1 55%}.bar a.mini{order:2;padding:8px 18px}.bar a.nl{order:3;flex:1 1 auto;justify-content:center;font-size:.9rem;padding:0 6px}.bar .home img{height:40px}}
+.tease{max-width:620px;margin:32px auto 0;text-align:left}.more2{display:inline-block;margin-top:22px;font-weight:600;text-decoration:none;font-size:1.06rem;min-height:44px;line-height:44px}
+.band{padding:56px 0}#price.band .price{font-size:clamp(3.6rem,10vw,5.5rem)}
+.about{text-align:left}.about h2{font-size:1.5rem;margin:36px 0 8px;letter-spacing:-.02em}.about p{color:#2b3340;font-size:1.08rem;margin:0 0 12px}.about ul{color:#2b3340;font-size:1.08rem;padding-left:22px}.about li{padding:3px 0}
+.ahero{display:flex;gap:22px;align-items:center;margin-top:8px}.ahero img{width:120px;height:120px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px #fff,0 8px 24px rgba(30,41,59,.18);flex:none}.ahero h1{margin:0;font-size:clamp(2.2rem,5vw,3.2rem)}
+@media(max-width:640px){.ahero{flex-direction:column;text-align:center}}
+</style>
 </head>
 <body>
 <div class="topban">Free landlord checklist: <a href="mailto:propertynudge@gmail.com?subject=checklist&amp;body=checklist">email the word &ldquo;checklist&rdquo;</a></div>
-<nav class="bar"><div class="in"><img src="logo.svg" alt="property nudge"><div class="r"><a class="nl" href="/guides/">Guides</a><a class="mini" href="mailto:propertynudge@gmail.com?subject=Sign%20up%20to%20Property%20Nudge&amp;body=Hi%20Jack%2C%0A%0AI%27d%20like%20to%20sign%20up%20to%20Property%20Nudge.%0A%0AName%3A%0A%0AProperty%20address%3A%0A%0AGas%20safety%20expiry%20date%3A%0AEICR%20date%3A%0AEPC%20expiry%20date%3A%0AAlarm%20check%20date%3A%0A%0A%28Not%20sure%20of%20a%20date%3F%20Just%20say%20so%20and%20we%27ll%20help%20you%20find%20it.%29%0A%0AThanks">Sign up</a></div></div></nav>
-
+<nav class="bar"><div class="in"><a class="home" href="/"><img src="/logo.svg" alt="property nudge"></a><div class="r"><a class="nl" href="/how-it-works/">How it works</a><a class="nl" href="/pricing/">Pricing</a><a class="nl" href="/guides/">Guides</a><a class="nl" href="/about/">About</a><a class="mini" href="mailto:propertynudge@gmail.com?subject=Sign%20up%20to%20Property%20Nudge&amp;body=Hi%20Jack%2C%0A%0AI%27d%20like%20to%20sign%20up%20to%20Property%20Nudge.%0A%0AName%3A%0A%0AProperty%20address%3A%0A%0AGas%20safety%20expiry%20date%3A%0AEICR%20date%3A%0AEPC%20expiry%20date%3A%0AAlarm%20check%20date%3A%0A%0A%28Not%20sure%20of%20a%20date%3F%20Just%20say%20so%20and%20we%27ll%20help%20you%20find%20it.%29%0A%0AThanks">Sign up</a></div></div></nav>
 <section class="hero"><span class="orb o1"></span><span class="orb o2"></span><div class="wrap">
-<img class="logo" src="logo.svg" alt="property nudge">
+<img class="logo" src="/logo.svg" alt="property nudge">
 <h1>Never miss a landlord<br><span class="grad">certificate date again.</span></h1>
 <p class="lead">A property administration service that reminds you before every gas, electrical, EPC and alarm check is due and keeps you up to date on the rules.</p>
 <a class="btn" href="mailto:propertynudge@gmail.com?subject=Sign%20up%20to%20Property%20Nudge&amp;body=Hi%20Jack%2C%0A%0AI%27d%20like%20to%20sign%20up%20to%20Property%20Nudge.%0A%0AName%3A%0A%0AProperty%20address%3A%0A%0AGas%20safety%20expiry%20date%3A%0AEICR%20date%3A%0AEPC%20expiry%20date%3A%0AAlarm%20check%20date%3A%0A%0A%28Not%20sure%20of%20a%20date%3F%20Just%20say%20so%20and%20we%27ll%20help%20you%20find%20it.%29%0A%0AThanks">Email to sign up</a>
 </div></section>
-
 <section id="who"><div class="wrap">
 <h2>Who it's for.</h2>
 <div class="cards who"><div class="card"><svg class="wico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><h3>Landlords managing their own lets</h3><p>You handle it yourself and want the dates handled for you.</p></div><div class="card"><svg class="wico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>New landlords</h3><p>Starting out and not sure what is due, or when.</p></div><div class="card"><svg class="wico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg><h3>Landlords running HMOs</h3><p>More certificates and a licence to track, for the same £15 per property, whatever the number of rooms.</p><a class="more" href="/guides/hmo-compliance-dates/">Read the HMO guide &rsaquo;</a></div><div class="card"><svg class="wico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg><h3>Landlords with an agent</h3><p>Paying an agent to manage? Keep them for finding tenants, and let us track your certificate dates for £15 a month.</p></div></div>
 </div></section>
-
 <section class="grey"><div class="wrap">
-<h2>What you get.</h2>
-<p class="lead">All by email. No app, no logins.</p>
-<div class="cards">
-<div class="card"><h3>Reminders</h3><p>Gas safety, EICR, EPC, legionella, smoke and CO alarms, Right to Rent.</p></div>
-<div class="card"><h3>A nudge to renew</h3><p>We chase the new certificate, log it and set the next reminder.</p></div>
-<div class="card"><h3>Legislation updates</h3><p>A monthly newsletter on what's changing, including the landlord register.</p></div>
-<div class="card"><h3>Full visibility</h3><p>Every date and every reminder sits in your own inbox.</p></div>
-</div>
-</div></section>
-
-<section><div class="wrap">
 <h2>How it works.</h2>
 <ol class="steps">
 <li><b>1</b><span>Email us your properties and dates. Not sure of one? We'll help you find it.</span></li>
 <li><b>2</b><span>We send back what we hold so you can check it.</span></li>
 <li><b>3</b><span>We remind you in good time. Reply with the new certificate and we set the next one.</span></li>
 </ol>
-<div class="sample"><p class="slabel">A sample reminder</p><div class="mail"><div class="mh"><span>From</span> Property Nudge &lt;propertynudge@gmail.com&gt;<br><span>Subject</span> <b>Gas safety check due in 30 days: 14 Example Road, Ringwood</b></div><div class="mb"><p>Dear Sam,</p><p>This is your one-month reminder: the gas safety record for 14 Example Road, Ringwood runs out on 12 December. If you have already booked the engineer, wonderful. Just reply with the date and we will not chase you.</p><p><b>What to do:</b></p><ol><li>Book a Gas Safe registered engineer for the annual gas safety check.</li><li>Let your tenant know the date and time.</li><li>Give your tenant a copy of the new record within 28 days of the check.</li><li>Send us a copy by replying to this email. We will log it and set your next reminder.</li></ol><p>Jack<br>Property Nudge</p></div></div><p class="sfine">Example only. Every reminder uses the dates on your own properties.</p></div>
-
+<a class="more2" href="/how-it-works/">See a sample reminder and what you get &rsaquo;</a>
 </div></section>
-
-<section id="price"><div class="wrap">
+<section id="price" class="band"><div class="wrap">
 <h2>One simple price.</h2>
 <p class="price">£15</p>
-<p class="per">per property, per month</p>
-<p class="note">Monthly standing order. 30 days' notice to stop, and you stay in charge.</p>
-<div class="agentbox"><h3>Already paying an agent?</h3><p>Most full management fees are a percentage of the rent, so they rise when the rent does. Property Nudge is £15 per property per month, HMOs included.</p><p>Keep your agent for what they do best, finding good tenants, and let us keep track of your certificate and licence dates. We email you before each one is due, so nothing slips. We don't manage tenants, repairs or rent.</p></div>
+<p class="per">per property, per month. HMOs included, 30 days' notice to stop.</p>
+<a class="more2" style="color:var(--pale)" href="/pricing/">Pricing and FAQs &rsaquo;</a>
 </div></section>
-
-<section id="cost"><div class="wrap">
+<section id="cost" class="band"><div class="wrap">
 <span class="warn">&#9888; Know the risks</span>
 <h2>What a missed date can cost.</h2>
-<p class="lead">The rules for landlords in England, in plain terms.</p>
-<div class="costs">
-<div class="card"><h3>Gas safety</h3><span class="amt">A fine with no upper limit</span><p>An annual check by a Gas Safe engineer is a legal duty. Breaking the rules is a criminal offence and the HSE can prosecute, with possible prison in serious cases.</p><a href="https://www.hse.gov.uk/gas/domestic/faqs.htm">HSE guidance</a></div>
-<div class="card"><h3>Electrical safety (EICR)</h3><span class="amt">Up to £40,000</span><p>Installations need inspecting at least every 5 years. Councils can issue a civil penalty for each breach.</p><a href="https://www.gov.uk/government/publications/electrical-safety-standards-in-the-private-and-social-rented-sectors-guidance/electrical-safety-standards-in-the-private-and-social-rented-sectors-guidance">GOV.UK guidance</a></div>
-<div class="card"><h3>EPC</h3><span class="amt">Up to £5,000</span><p>Letting a home rated F or G without a valid exemption can bring a penalty of up to £5,000 per property.</p><a href="https://www.gov.uk/guidance/domestic-private-rented-property-minimum-energy-efficiency-standard-landlord-guidance">GOV.UK guidance</a></div>
-<div class="card"><h3>Smoke and CO alarms</h3><span class="amt">Up to £5,000</span><p>If a council remedial notice isn't followed within 28 days, it can charge a penalty for each breach.</p><a href="https://www.gov.uk/government/publications/smoke-and-carbon-monoxide-alarms-explanatory-booklet-for-landlords/the-smoke-and-carbon-monoxide-alarm-england-regulations-2015-qa-booklet-for-the-private-rented-sector-landlords-and-tenants">GOV.UK guidance</a></div>
-</div>
-<p class="fine">Section 21 notices ended in England on 1 May 2026 under the Renters' Rights Act, but the duties and penalties above still apply. If a certificate lapses, it's worth checking your insurance policy. This is general information, not legal advice. <a href="https://www.gov.uk/government/news/when-will-the-renters-right-act-come-into-force">Renters' Rights Act on GOV.UK</a></p>
+<p class="lead">Up to £40,000 for an EICR breach, up to £5,000 for an EPC or alarm breach, and a fine with no upper limit for gas safety.</p>
+<a class="more2" style="color:#b45309" href="/risks/">See the risks in full &rsaquo;</a>
 </div></section>
-
-<section id="checklist" class="grey"><div class="wrap">
+<section id="checklist" ><div class="wrap">
 <h2>Free landlord certificate checklist.</h2>
 <p class="lead">Not sure which certificates you need and when they're due? Email the word "checklist" to propertynudge@gmail.com and I'll send our one-page landlord checklist straight back. It covers gas safety, EICR, EPC, smoke and CO alarms, legionella, Right to Rent and deposits. It's free and there's nothing to fill in.</p>
 <a class="btn" href="mailto:propertynudge@gmail.com?subject=checklist&amp;body=checklist">Email "checklist"</a>
 </div></section>
-
-<section id="newsletter"><div class="wrap">
-<h2>Monthly newsletter.</h2>
-<p class="lead">Headlines from the latest issue. Sign up to read the full thing.</p>
-<ul class="news">
-<li><a href="mailto:propertynudge@gmail.com?subject=Sign%20up%20to%20Property%20Nudge&amp;body=Hi%20Jack%2C%0A%0AI%27d%20like%20to%20sign%20up%20to%20Property%20Nudge.%0A%0AName%3A%0A%0AProperty%20address%3A%0A%0AGas%20safety%20expiry%20date%3A%0AEICR%20date%3A%0AEPC%20expiry%20date%3A%0AAlarm%20check%20date%3A%0A%0A%28Not%20sure%20of%20a%20date%3F%20Just%20say%20so%20and%20we%27ll%20help%20you%20find%20it.%29%0A%0AThanks"><span><strong>The new landlord register opens on 15 December</strong><small>What it costs, your regional deadline and what you'll need to upload.</small></span><span class="go" aria-hidden="true">&rsaquo;</span></a></li>
-<li><a href="mailto:propertynudge@gmail.com?subject=Sign%20up%20to%20Property%20Nudge&amp;body=Hi%20Jack%2C%0A%0AI%27d%20like%20to%20sign%20up%20to%20Property%20Nudge.%0A%0AName%3A%0A%0AProperty%20address%3A%0A%0AGas%20safety%20expiry%20date%3A%0AEICR%20date%3A%0AEPC%20expiry%20date%3A%0AAlarm%20check%20date%3A%0A%0A%28Not%20sure%20of%20a%20date%3F%20Just%20say%20so%20and%20we%27ll%20help%20you%20find%20it.%29%0A%0AThanks"><span><strong>Smoke and CO alarms: test them before winter</strong><small>Where a CO alarm is required, and what to do if a tenant reports a fault.</small></span><span class="go" aria-hidden="true">&rsaquo;</span></a></li>
-<li><a href="mailto:propertynudge@gmail.com?subject=Sign%20up%20to%20Property%20Nudge&amp;body=Hi%20Jack%2C%0A%0AI%27d%20like%20to%20sign%20up%20to%20Property%20Nudge.%0A%0AName%3A%0A%0AProperty%20address%3A%0A%0AGas%20safety%20expiry%20date%3A%0AEICR%20date%3A%0AEPC%20expiry%20date%3A%0AAlarm%20check%20date%3A%0A%0A%28Not%20sure%20of%20a%20date%3F%20Just%20say%20so%20and%20we%27ll%20help%20you%20find%20it.%29%0A%0AThanks"><span><strong>Your next certificate dates</strong><small>Every issue lists the next dates due on your own properties.</small></span><span class="go" aria-hidden="true">&rsaquo;</span></a></li>
-</ul>
-<a class="btn" href="mailto:propertynudge@gmail.com?subject=Sign%20up%20to%20Property%20Nudge&amp;body=Hi%20Jack%2C%0A%0AI%27d%20like%20to%20sign%20up%20to%20Property%20Nudge.%0A%0AName%3A%0A%0AProperty%20address%3A%0A%0AGas%20safety%20expiry%20date%3A%0AEICR%20date%3A%0AEPC%20expiry%20date%3A%0AAlarm%20check%20date%3A%0A%0A%28Not%20sure%20of%20a%20date%3F%20Just%20say%20so%20and%20we%27ll%20help%20you%20find%20it.%29%0A%0AThanks">Sign up</a>
-</div></section>
-<section><div class="wrap">
-<h2>Good to know.</h2>
-<div class="faq">
-<div><h3>Are you a letting agent?</h3><p>No. We don't find tenants, collect rent or manage properties.</p></div>
-<div><h3>Do you book the inspections?</h3><p>No. We remind you, and you book your own engineer or assessor.</p></div>
-<div><h3>Do you give legal advice?</h3><p>No. Our updates are general information with links to GOV.UK.</p></div>
-<div><h3>Can I stop?</h3><p>Yes, any time with 30 days' notice.</p></div>
-</div>
-</div></section>
-
-
-
-<section class="hello"><div class="wrap">
+<section class="hello grey"><div class="wrap">
 <h2>Say hello.</h2>
 <p class="lead">Questions or ready to start? Drop me an email.</p>
 <a class="btn" href="mailto:propertynudge@gmail.com">propertynudge@gmail.com</a>
-<div class="founder"><img src="jack.jpg" alt="Jack Hanks, founder of Property Nudge" width="96" height="96"><div><p class="fname">Jack Hanks</p><p class="frole">Founder, Property Nudge</p></div></div>
-<p class="fstory">I've worked in property management and estate agency, and expired certificates and smoke alarms turned up at check-ins and inspections far too often. Property Nudge is the reminder service I wanted landlords to have.</p>
+<div class="founder"><img src="/jack.jpg" alt="Jack Hanks, founder of Property Nudge" width="96" height="96"><div><p class="fname">Jack Hanks</p><p class="frole">Founder, Property Nudge</p></div></div>
+<p class="fstory">I worked in property management and estate agency and kept seeing missed certificates. <a href="/about/">Read my story &rsaquo;</a></p>
 </div></section>
-
 <footer><div class="wrap">
-<p><a href="/guides/">Guides</a> &middot; <a href="/events/">Local landlord events</a></p>
+<p class="flinks"><a href="/how-it-works/">How it works</a> &middot; <a href="/pricing/">Pricing</a> &middot; <a href="/guides/">Guides</a> &middot; <a href="/events/">Local landlord events</a> &middot; <a href="/risks/">Risks</a> &middot; <a href="/newsletter/">Newsletter</a> &middot; <a href="/about/">About</a></p>
 <p>Privacy: we hold your name, email address and property certificate dates, and use them only to send your reminders and updates. We never sell or share them. To see or delete your details, email <a href="mailto:propertynudge@gmail.com">propertynudge@gmail.com</a>.</p>
 <p>Property Nudge</p>
 </div></footer>

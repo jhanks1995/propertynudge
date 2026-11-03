@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monthly newsletter | Property Nudge</title>
+<meta name="description" content="The Property Nudge monthly newsletter for clients: legislation updates for landlords and your next certificate dates.">
+<link rel="canonical" href="https://propertynudge.uk/newsletter/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<style>
+:root{--ink:#0f1720;--navy:#111827;--ch:#3a3a40;--muted:#5b6170;--sky:#44A6E3;--deep:#1f78bd;--pale:#9FD0F2;--line:rgba(15,23,32,.08)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:#fbfcfe;line-height:1.55;-webkit-font-smoothing:antialiased;text-align:center}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
+section{padding:88px 0;position:relative;overflow:hidden}
+h1,h2{font-weight:700;letter-spacing:-.035em;line-height:1.05;margin:0}
+h1{font-size:clamp(2.6rem,6.4vw,4.6rem);margin-top:44px;font-weight:800}
+h2{font-size:clamp(2rem,4.4vw,3.1rem);margin-bottom:16px}
+h3{letter-spacing:-.01em}
+.grad{background:linear-gradient(100deg,#2f86c8 0%,#44A6E3 55%,#7cc4f0 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(1.1rem,2vw,1.35rem);color:var(--muted);margin:18px auto 0;max-width:580px;font-weight:400}
+/* top bar */
+.bar{position:sticky;top:0;z-index:10;background:rgba(251,252,254,.72);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid var(--line)}
+.bar .in{max-width:1080px;margin:0 auto;padding:10px 24px;display:flex;justify-content:space-between;align-items:center}
+.bar img{height:30px;width:auto;display:block}
+.bar a.mini{background:var(--ink);color:#fff;text-decoration:none;font-weight:600;font-size:.95rem;padding:10px 20px;border-radius:999px;min-height:44px;display:inline-flex;align-items:center}
+.bar a.mini:hover{background:var(--deep)}
+.topban{background:var(--ink);color:#fff;text-align:center;font-size:.9rem;padding:9px 16px;line-height:1.3}.topban a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:3px}.topban a:hover{opacity:.85}@media(max-width:640px){.topban{font-size:.82rem;padding:8px 12px}}
+/* hero */
+.hero{padding:84px 0 96px;background:radial-gradient(ellipse 70% 55% at 50% 0%,rgba(68,166,227,.22),transparent 70%),linear-gradient(180deg,#eef6fc,#fbfcfe)}
+.orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;pointer-events:none;z-index:0}
+.o1{width:380px;height:380px;background:#9FD0F2;top:-80px;left:-120px}
+.o2{width:320px;height:320px;background:#44A6E3;opacity:.25;bottom:-120px;right:-80px}
+section>.wrap{position:relative;z-index:1}
+.logo{width:min(400px,78vw);height:auto;display:block;margin:0 auto;animation:rise .9s ease both}
+.hero h1,.hero .lead,.hero .btn{animation:rise .9s ease both}
+.hero h1{animation-delay:.08s}.hero .lead{animation-delay:.16s}.hero .btn{animation-delay:.24s}
+@keyframes rise{from{transform:translateY(12px)}to{transform:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;margin-top:34px;background:linear-gradient(180deg,#4fb0ea,#2f8fd3);color:#fff;text-decoration:none;font-size:1.08rem;font-weight:600;padding:14px 34px;border-radius:999px;box-shadow:0 1px 0 rgba(255,255,255,.35) inset,0 8px 24px -8px rgba(47,134,200,.6);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 1px 0 rgba(255,255,255,.35) inset,0 14px 30px -10px rgba(47,134,200,.7)}
+a:focus-visible{outline:3px solid var(--pale);outline-offset:3px}
+.grey{background:#f3f6fa}
+/* glass cards */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:40px;text-align:left}
+.card,.ev,.steps li,.news{background:rgba(255,255,255,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.9);box-shadow:0 0 0 1px var(--line),0 2px 4px rgba(15,23,32,.03),0 12px 32px -12px rgba(15,23,32,.12);border-radius:22px}
+.card{padding:28px}
+.card h3{margin:0 0 6px;font-size:1.15rem}
+.card p{margin:0;color:var(--muted)}
+.who{margin-top:28px}.who .card{padding:22px 24px}.wico{width:34px;height:34px;padding:7px;border-radius:10px;background:#eef6fc;color:var(--deep);margin-bottom:10px;display:block}
+
+/* price panel */
+#price{background:radial-gradient(ellipse 60% 70% at 50% 0%,rgba(68,166,227,.28),transparent 70%),linear-gradient(180deg,#141b26,#0b1018);color:#fff}
+#price h2{color:#fff}
+.price{font-size:clamp(5rem,14vw,8.5rem);font-weight:800;letter-spacing:-.05em;line-height:1;margin:14px 0 0;background:linear-gradient(180deg,#fff 30%,#9FD0F2);-webkit-background-clip:text;background-clip:text;color:transparent}
+.per{font-size:1.3rem;color:#c9d6e3;margin:10px 0 0}
+.who .card a.more{display:inline-block;margin-top:10px;font-weight:600;text-decoration:none}.sample{max-width:620px;margin:40px auto 0;text-align:left}.slabel{margin:0 0 10px;font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--deep);text-align:center}.mail{background:#fff;border-radius:16px;box-shadow:0 0 0 1px var(--line),0 12px 32px -12px rgba(15,23,32,.14);overflow:hidden}.mail .mh{padding:14px 20px;background:#f2f5f9;border-bottom:1px solid var(--line);font-size:.93rem;color:var(--muted);line-height:1.7}.mail .mh span{display:inline-block;min-width:56px;font-weight:600;color:#8a93a3}.mail .mh b{color:var(--ink)}.mail .mb{padding:18px 22px 6px;font-size:1rem;color:#2b3340}.mail .mb p{margin:0 0 12px}.mail .mb ol{margin:0 0 12px;padding-left:22px}.mail .mb li{padding:2px 0}.sfine{margin:10px 0 0;text-align:center;color:var(--muted);font-size:.9rem}.fstory{max-width:520px;margin:22px auto 0;color:var(--muted);font-size:1.04rem}
+#price .agentbox{max-width:600px;margin:34px auto 0;padding:24px 28px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:18px;text-align:left}#price .agentbox h3{margin:0 0 10px;color:#fff;font-size:1.15rem}#price .agentbox p{margin:0 0 10px;color:#c9d6e3;font-size:1.04rem}#price .agentbox p:last-child{margin-bottom:0}
+#price .note{color:#aebccb;font-size:1.08rem;max-width:560px;margin:26px auto 0}
+/* steps */
+.steps{list-style:none;padding:0;margin:40px 0 0;display:grid;gap:14px;counter-reset:s}
+.steps li{padding:22px 26px;text-align:left;display:flex;gap:20px;align-items:center;color:var(--muted)}
+.steps b{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-size:1.05rem;color:#fff;background:linear-gradient(180deg,#4fb0ea,#2f8fd3);box-shadow:0 6px 16px -6px rgba(47,134,200,.6)}
+/* newsletter */
+.news{list-style:none;padding:0;margin:40px 0 0;text-align:left;overflow:hidden}
+.news li+li{border-top:1px solid var(--line)}
+.news a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 26px;min-height:64px;color:var(--ink);text-decoration:none;transition:background .2s}
+.news a:hover{background:rgba(68,166,227,.06)}
+.news small{display:block;color:var(--muted);font-size:.95rem;margin-top:3px}
+.news strong{font-size:1.12rem;letter-spacing:-.01em}
+.news .go{color:var(--deep);font-size:1.5rem;flex:none}
+/* hmo */
+.hmo-box{max-width:620px;margin:28px auto 0;padding:22px 26px;background:#eef6fc;border-radius:16px;text-align:left}.hmo-box h3{margin:0 0 8px;font-size:1.1rem}.hmo-list{margin:0;padding-left:22px;color:var(--muted);font-size:1.06rem}.hmo-list li{padding:4px 0}
+/* faq */
+.faq{margin-top:36px;text-align:left}
+.faq div{padding:20px 4px;border-top:1px solid var(--line)}
+.faq div:last-child{border-bottom:1px solid var(--line)}
+.faq h3{margin:0 0 4px;font-size:1.1rem}
+.faq p{margin:0;color:var(--muted)}
+/* events */
+.events{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:40px;text-align:left}
+.ev{padding:26px;display:flex;flex-direction:column}
+.ev .date{align-self:flex-start;background:var(--ink);color:#fff;font-weight:600;font-size:.82rem;letter-spacing:.05em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+.ev h3{margin:14px 0 4px;font-size:1.22rem}
+.ev p{margin:0 0 6px;color:var(--muted)}
+.ev .org{font-size:.93rem}
+.ev a{margin-top:auto;padding-top:12px;font-weight:600;text-decoration:none;color:var(--deep);min-height:44px;display:inline-flex;align-items:center}
+.fine{color:var(--muted);font-size:.9rem;margin-top:24px}
+a{color:var(--deep)}
+.hello{background:radial-gradient(ellipse 60% 70% at 50% 100%,rgba(68,166,227,.16),transparent 70%),#fbfcfe}
+.sig{font-size:1.25rem;font-weight:600;margin-top:22px}
+footer{background:#0b1018;color:#aebccb;font-size:.88rem;padding:36px 0}
+footer p{max-width:620px;margin:0 auto 10px}
+footer a{color:var(--pale)}
+@media(max-width:640px){section{padding:64px 0}.hero{padding:48px 0 68px}h1{margin-top:32px}.cards,.events{grid-template-columns:1fr}.btn{width:100%;max-width:340px;font-size:1.12rem;min-height:56px}.bar img{height:26px}.steps li{padding:18px 20px}.news a{padding:20px}}
+
+.founder{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:36px;text-align:left}
+.founder img{width:96px;height:96px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px #fff,0 8px 24px rgba(30,41,59,.18);background:#cfd8e0}
+.founder .fname{margin:0;font-size:1.15rem;font-weight:700;letter-spacing:-.01em;color:#23272e}
+.founder .frole{margin:2px 0 0;font-size:.95rem;color:#5b6573}
+#cost{background:linear-gradient(180deg,#fafaf9 0%,#f5f5f4 100%);border-top:1px solid #e7e5e4;border-bottom:1px solid #e7e5e4}
+#cost h2{color:#1c1917}
+#cost .warn{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#b45309;background:#fef3c7;border:1px solid #fcd34d;border-radius:999px;padding:4px 12px;margin-bottom:14px}
+.costs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:40px;text-align:left}
+.costs .card{background:#fff;border:1px solid #e7e5e4;border-top:4px solid #dc2626;box-shadow:0 10px 30px rgba(28,25,23,.06)}
+.costs .card:nth-child(even){border-top-color:#f59e0b}
+.costs .card .amt{display:block;font-size:1.6rem;font-weight:800;letter-spacing:-.02em;line-height:1.2;color:#b91c1c;margin:2px 0 8px}
+.costs .card a{font-weight:600;font-size:.93rem;text-decoration:none;color:#b91c1c}
+#cost .fine{margin-top:28px;padding:14px 18px;background:#fffbeb;border-left:4px solid #f59e0b;border-radius:10px;text-align:left;color:#57534e}
+#cost .fine a{color:#b45309}
+@media(max-width:640px){.costs{grid-template-columns:1fr}}
+
+.bar .r{display:flex;gap:18px;align-items:center}.bar a.nl{color:var(--ink);text-decoration:none;font-weight:600;font-size:.95rem;min-height:44px;display:inline-flex;align-items:center}.bar a.nl:hover{color:var(--deep)}
+.guide{text-align:left;padding:56px 0 72px}.guide h1{font-size:clamp(2rem,4.6vw,3rem);margin-top:0}.guide h2{font-size:1.3rem;margin:30px 0 8px;letter-spacing:-.01em}.guide p,.guide li{color:#2b3340;font-size:1.06rem}.checked{color:var(--muted);font-size:.92rem;margin-top:10px}.src{font-size:.93rem;color:var(--muted)}.src a{word-break:break-word}.crumb{font-size:.92rem}.cta{margin-top:28px;padding:18px 22px;background:#eef6fc;border-radius:16px}.card a.more{font-weight:600;text-decoration:none}
+</style>
+<style>
+.bar .in{gap:12px}.bar .home{display:flex;align-items:center;min-height:44px}.bar .r{display:flex;gap:6px;align-items:center}
+.bar a.nl{color:var(--ink);text-decoration:none;font-weight:600;font-size:.95rem;min-height:44px;display:inline-flex;align-items:center;padding:0 10px;border-radius:10px}.bar a.nl:hover{color:var(--deep)}.bar a.nl.on{color:var(--deep)}
+.bar a.mini{margin-left:8px}.bar .home img{height:42px}.bar a.nl{white-space:nowrap}
+.flinks{line-height:2}
+@media(max-width:720px){.bar .in{flex-wrap:wrap;padding:6px 16px 2px;row-gap:0}.bar .r{display:contents}.bar .home{flex:1 1 55%}.bar a.mini{order:2;padding:8px 18px}.bar a.nl{order:3;flex:1 1 auto;justify-content:center;font-size:.9rem;padding:0 6px}.bar .home img{height:40px}}
+.tease{max-width:620px;margin:32px auto 0;text-align:left}.more2{display:inline-block;margin-top:22px;font-weight:600;text-decoration:none;font-size:1.06rem;min-height:44px;line-height:44px}
+.band{padding:56px 0}#price.band .price{font-size:clamp(3.6rem,10vw,5.5rem)}
+.about{text-align:left}.about h2{font-size:1.5rem;margin:36px 0 8px;letter-spacing:-.02em}.about p{color:#2b3340;font-size:1.08rem;margin:0 0 12px}.about ul{color:#2b3340;font-size:1.08rem;padding-left:22px}.about li{padding:3px 0}
+.ahero{display:flex;gap:22px;align-items:center;margin-top:8px}.ahero img{width:120px;height:120px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px #fff,0 8px 24px rgba(30,41,59,.18);flex:none}.ahero h1{margin:0;font-size:clamp(2.2rem,5vw,3.2rem)}
+@media(max-width:640px){.ahero{flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+<div class="topban">Free landlord checklist: <a href="mailto:propertynudge@gmail.com?subject=checklist&amp;body=checklist">email the word &ldquo;checklist&rdquo;</a></div>
+<nav class="bar"><div class="in"><a class="home" href="/"><img src="/logo.svg" alt="property nudge"></a><div class="r"><a class="nl" href="/how-it-works/">How it works</a><a class="nl" href="/pricing/">Pricing</a><a class="nl" href="/guides/">Guides</a><a class="nl" href="/about/">About</a><a class="mini" href="mailto:propertynudge@gmail.com?subject=Sign%20up%20to%20Property%20Nudge&amp;body=Hi%20Jack%2C%0A%0AI%27d%20like%20to%20sign%20up%20to%20Property%20Nudge.%0A%0AName%3A%0A%0AProperty%20address%3A%0A%0AGas%20safety%20expiry%20date%3A%0AEICR%20date%3A%0AEPC%20expiry%20date%3A%0AAlarm%20check%20date%3A%0A%0A%28Not%20sure%20of%20a%20date%3F%20Just%20say%20so%20and%20we%27ll%20help%20you%20find%20it.%29%0A%0AThanks">Sign up</a></div></div></nav>
+<section id="newsletter"><div class="wrap">
+<h2>Monthly newsletter.</h2>
+<p class="lead">Headlines from the latest issue. The newsletter comes with the £15 per property per month service. Sign up to read the full thing.</p>
+<ul class="news">
+<li><a href="mailto:propertynudge@gmail.com?subject=Sign%20up%20to%20Property%20Nudge&amp;body=Hi%20Jack%2C%0A%0AI%27d%20like%20to%20sign%20up%20to%20Property%20Nudge.%0A%0AName%3A%0A%0AProperty%20address%3A%0A%0AGas%20safety%20expiry%20date%3A%0AEICR%20date%3A%0AEPC%20expiry%20date%3A%0AAlarm%20check%20date%3A%0A%0A%28Not%20sure%20of%20a%20date%3F%20Just%20say%20so%20and%20we%27ll%20help%20you%20find%20it.%29%0A%0AThanks"><span><strong>The new landlord register opens on 15 December</strong><small>What it costs, your regional deadline and what you'll need to upload.</small></span><span class="go" aria-hidden="true">&rsaquo;</span></a></li>
+<li><a href="mailto:propertynudge@gmail.com?subject=Sign%20up%20to%20Property%20Nudge&amp;body=Hi%20Jack%2C%0A%0AI%27d%20like%20to%20sign%20up%20to%20Property%20Nudge.%0A%0AName%3A%0A%0AProperty%20address%3A%0A%0AGas%20safety%20expiry%20date%3A%0AEICR%20date%3A%0AEPC%20expiry%20date%3A%0AAlarm%20check%20date%3A%0A%0A%28Not%20sure%20of%20a%20date%3F%20Just%20say%20so%20and%20we%27ll%20help%20you%20find%20it.%29%0A%0AThanks"><span><strong>Smoke and CO alarms: test them before winter</strong><small>Where a CO alarm is required, and what to do if a tenant reports a fault.</small></span><span class="go" aria-hidden="true">&rsaquo;</span></a></li>
+<li><a href="mailto:propertynudge@gmail.com?subject=Sign%20up%20to%20Property%20Nudge&amp;body=Hi%20Jack%2C%0A%0AI%27d%20like%20to%20sign%20up%20to%20Property%20Nudge.%0A%0AName%3A%0A%0AProperty%20address%3A%0A%0AGas%20safety%20expiry%20date%3A%0AEICR%20date%3A%0AEPC%20expiry%20date%3A%0AAlarm%20check%20date%3A%0A%0A%28Not%20sure%20of%20a%20date%3F%20Just%20say%20so%20and%20we%27ll%20help%20you%20find%20it.%29%0A%0AThanks"><span><strong>Your next certificate dates</strong><small>Every issue lists the next dates due on your own properties.</small></span><span class="go" aria-hidden="true">&rsaquo;</span></a></li>
+</ul>
+<a class="btn" href="mailto:propertynudge@gmail.com?subject=Sign%20up%20to%20Property%20Nudge&amp;body=Hi%20Jack%2C%0A%0AI%27d%20like%20to%20sign%20up%20to%20Property%20Nudge.%0A%0AName%3A%0A%0AProperty%20address%3A%0A%0AGas%20safety%20expiry%20date%3A%0AEICR%20date%3A%0AEPC%20expiry%20date%3A%0AAlarm%20check%20date%3A%0A%0A%28Not%20sure%20of%20a%20date%3F%20Just%20say%20so%20and%20we%27ll%20help%20you%20find%20it.%29%0A%0AThanks">Sign up</a>
+</div></section>
+<footer><div class="wrap">
+<p class="flinks"><a href="/how-it-works/">How it works</a> &middot; <a href="/pricing/">Pricing</a> &middot; <a href="/guides/">Guides</a> &middot; <a href="/events/">Local landlord events</a> &middot; <a href="/risks/">Risks</a> &middot; <a href="/newsletter/">Newsletter</a> &middot; <a href="/about/">About</a></p>
+<p>Privacy: we hold your name, email address and property certificate dates, and use them only to send your reminders and updates. We never sell or share them. To see or delete your details, email <a href="mailto:propertynudge@gmail.com">propertynudge@gmail.com</a>.</p>
+<p>Property Nudge</p>
+</div></footer>
+</body>
+</html>
