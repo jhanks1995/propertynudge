@@ -3,9 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Property Nudge | Your landlord dates, remembered for you</title>
-<meta name="description" content="Property Nudge is a property administration service for landlords. Reminders before every certificate date and monthly legislation updates. £15 per property per month.">
+<title>Property Nudge | Self manage with confidence</title>
+<meta name="description" content="Property Nudge is a property administration service for landlords who self-manage. We contact you before gas safety, EICR, EPC and other compliance dates are due. £15 per property per month. Self manage with confidence.">
 <link rel="canonical" href="https://propertynudge.uk/">
+<meta property="og:title" content="Property Nudge | Self manage with confidence">
+<meta property="og:description" content="Property Nudge is a property administration service for landlords who self-manage. We contact you before gas safety, EICR, EPC and other compliance dates are due. £15 per property per month. Self manage with confidence.">
+<meta property="og:url" content="https://propertynudge.uk/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Property Nudge | Self manage with confidence">
+<meta name="twitter:description" content="Property Nudge is a property administration service for landlords who self-manage. We contact you before gas safety, EICR, EPC and other compliance dates are due. £15 per property per month. Self manage with confidence.">
 <link rel="icon" type="image/png" href="/favicon.png">
 <style>
 :root{--ink:#0f1720;--navy:#111827;--ch:#3a3a40;--muted:#5b6170;--sky:#44A6E3;--deep:#1f78bd;--pale:#9FD0F2;--line:rgba(15,23,32,.08)}
@@ -130,26 +138,39 @@ footer a{color:var(--pale)}
 <style>/* centred menu */.bar .in{flex-direction:column;justify-content:center;align-items:center;gap:0;padding:8px 16px 6px}.bar .home{justify-content:center;min-height:0}.bar .home img{height:38px}.bar .r{display:flex!important;justify-content:center;align-items:center;gap:4px;flex-wrap:nowrap}.bar a.nl{order:0!important;flex:0 0 auto!important;min-height:40px;padding:0 12px!important}.bar a.mini{order:0!important;margin-left:10px;min-height:38px;padding:7px 18px}@media(max-width:720px){.bar .in{flex-wrap:nowrap;padding:6px 8px 6px}.bar .home img{height:32px}.bar .r{display:flex!important;gap:0}.bar a.nl{font-size:.86rem;padding:0 8px!important}.bar a.mini{margin-left:6px;padding:6px 14px;font-size:.88rem}}@media(max-width:380px){.bar a.nl{font-size:.8rem;padding:0 6px!important}.bar a.mini{padding:6px 12px}}</style>
 <style>/* left logo menu */.bar .in{flex-direction:row!important;justify-content:space-between!important;max-width:1080px;padding:6px 20px!important}.bar .home img{height:50px!important;width:50px!important;object-fit:contain}.bar a.mini{white-space:nowrap}.bar .r{justify-content:flex-end}@media(max-width:720px){.bar .in{padding:6px 10px!important;gap:4px}.bar .home img{height:40px!important;width:40px!important}.bar .r{gap:0}.bar a.nl{font-size:.82rem;padding:0 6px!important}.bar a.mini{margin-left:4px;padding:6px 12px;font-size:.84rem}}@media(max-width:380px){.bar .home img{height:34px!important;width:34px!important}.bar a.nl{font-size:.76rem;padding:0 4px!important}.bar a.mini{padding:6px 10px;font-size:.8rem}}</style>
 <style>/* phone dropdown menu */.bar .menubtn{display:none}@media(max-width:720px){.bar{position:sticky}.bar .in{flex-wrap:nowrap!important;flex-direction:row!important;justify-content:space-between!important;align-items:center;padding:6px 14px!important;position:relative}.bar .home{flex:0 0 auto!important;order:0!important;justify-content:flex-start!important}.bar .home img{height:42px!important;width:42px!important}.bar .menubtn{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border:0;background:transparent;cursor:pointer;border-radius:12px;padding:0}.bar .menubtn span,.bar .menubtn span::before,.bar .menubtn span::after{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;content:"";position:relative;transition:transform .2s,background .2s}.bar .menubtn span::before{position:absolute;top:-7px}.bar .menubtn span::after{position:absolute;top:7px}.bar.open .menubtn span{background:transparent}.bar.open .menubtn span::before{top:0;transform:rotate(45deg)}.bar.open .menubtn span::after{top:0;transform:rotate(-45deg)}.bar .r{display:none!important;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:rgba(251,252,254,.98);border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(15,23,32,.08);padding:6px 18px 18px}.bar.open{background:#fbfcfe}.bar.open .r{display:flex!important;background:#fbfcfe}.bar a.nl{order:0!important;flex:none!important;justify-content:flex-start;font-size:1.05rem!important;min-height:52px;padding:0 4px!important;border-bottom:1px solid var(--line);border-radius:0;white-space:normal}.bar a.mini{order:0!important;margin:16px 0 0!important;justify-content:center;min-height:50px;font-size:1.02rem!important;padding:10px 20px!important}}</style>
+
+<style>/* slogan and savings (draft 2026-11-18) */
+.slogan{margin:12px auto 0;font-size:clamp(1.05rem,2.2vw,1.28rem);font-weight:600;letter-spacing:.02em;color:var(--deep)}
+.hero .slogan{animation:rise .9s ease both;animation-delay:.04s}
+#savings{background:linear-gradient(180deg,#eef6fc 0%,#f5f9fc 100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+#savings h2{color:var(--ink)}
+.savings{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:40px;text-align:left}
+.savings .card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--sky);box-shadow:0 10px 30px rgba(15,23,32,.06)}
+.savings .card .amt{display:block;font-size:1.6rem;font-weight:800;letter-spacing:-.02em;line-height:1.2;color:var(--deep);margin:2px 0 8px}
+#savings .fine{margin-top:28px;padding:14px 18px;background:#fff;border-left:4px solid var(--sky);border-radius:10px;text-align:left;color:var(--muted)}
+@media(max-width:640px){.savings{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <div class="topban">Free landlord checklist: <a href="mailto:propertynudge@gmail.com?subject=checklist&amp;body=checklist">email the word &ldquo;checklist&rdquo;</a></div>
 <nav class="bar"><div class="in"><a class="home" href="/"><img src="/pn-icon.png" alt="property nudge" width="50" height="50"></a><div class="r"><a class="nl" href="/how-it-works/">How it works</a><a class="nl" href="/pricing/">Pricing</a><a class="nl" href="/guides/">Guides</a><a class="nl" href="/about/">About</a><a class="mini" href="mailto:propertynudge@gmail.com?subject=Sign%20up%20to%20Property%20Nudge&amp;body=Hi%20Jack%2C%0A%0AI%27d%20like%20to%20sign%20up%20to%20Property%20Nudge.%0A%0AName%3A%0A%0AProperty%20address%3A%0A%0AGas%20safety%20expiry%20date%3A%0AEICR%20date%3A%0AEPC%20expiry%20date%3A%0AAlarm%20check%20date%3A%0A%0A%28Not%20sure%20of%20a%20date%3F%20Just%20say%20so%20and%20we%27ll%20help%20you%20find%20it.%29%0A%0AThanks">Sign up</a></div><button class="menubtn" type="button" aria-label="Menu" aria-expanded="false" onclick="var b=this.closest('.bar');b.classList.toggle('open');this.setAttribute('aria-expanded',b.classList.contains('open'))"><span></span></button></div></nav>
 <section class="hero"><span class="orb o1"></span><span class="orb o2"></span><div class="wrap">
 <img class="logo" src="/logo.svg" alt="property nudge">
+<p class="slogan">Self manage with confidence</p>
 <h1>Never miss a landlord<br><span class="grad">certificate date again.</span></h1>
-<p class="lead">A property administration service that reminds you before every gas, electrical, EPC and alarm check is due and keeps you up to date on the rules.</p>
+<p class="lead">A property administration service for landlords who self-manage. We contact you before gas safety, EICR, EPC and other compliance dates are due, and keep you up to date on the rules.</p>
 <a class="btn" href="mailto:propertynudge@gmail.com?subject=Sign%20up%20to%20Property%20Nudge&amp;body=Hi%20Jack%2C%0A%0AI%27d%20like%20to%20sign%20up%20to%20Property%20Nudge.%0A%0AName%3A%0A%0AProperty%20address%3A%0A%0AGas%20safety%20expiry%20date%3A%0AEICR%20date%3A%0AEPC%20expiry%20date%3A%0AAlarm%20check%20date%3A%0A%0A%28Not%20sure%20of%20a%20date%3F%20Just%20say%20so%20and%20we%27ll%20help%20you%20find%20it.%29%0A%0AThanks">Email to sign up</a>
 </div></section>
 <section id="who"><div class="wrap">
 <h2>Who it's for.</h2>
-<div class="cards who"><div class="card"><svg class="wico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><h3>Landlords managing their own lets</h3><p>You handle it yourself and want the dates handled for you.</p></div><div class="card"><svg class="wico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>New landlords</h3><p>Starting out and not sure what is due, or when.</p></div><div class="card"><svg class="wico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg><h3>Landlords running HMOs</h3><p>More certificates and a licence to track, for the same £15 per property, whatever the number of rooms.</p><a class="more" href="/guides/hmo-compliance-dates/">Read the HMO guide &rsaquo;</a></div><div class="card"><svg class="wico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg><h3>Landlords with an agent</h3><p>Paying an agent to manage? Keep them for finding tenants, and let us track your certificate dates for £15 a month.</p></div></div>
+<div class="cards who"><div class="card"><svg class="wico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><h3>Landlords managing their own lets</h3><p>You self-manage and want the dates and admin handled for you.</p></div><div class="card"><svg class="wico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>New landlords</h3><p>Starting out and not sure what is due, or when.</p></div><div class="card"><svg class="wico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg><h3>Landlords running HMOs</h3><p>More certificates and a licence to track, for the same £15 per property, whatever the number of rooms.</p><a class="more" href="/guides/hmo-compliance-dates/">Read the HMO guide &rsaquo;</a> <a class="more" href="/hmo-checklist.pdf" target="_blank" rel="noopener">Download the HMO checklist (PDF) &rsaquo;</a></div><div class="card"><svg class="wico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg><h3>Landlords with an agent</h3><p>You don't need full management to find tenants. Use an agent's one-off tenant find service, then self-manage with Property Nudge supporting the admin for £15 a month.</p></div></div>
 </div></section>
 <section class="grey"><div class="wrap">
 <h2>How it works.</h2>
 <ol class="steps">
 <li><b>1</b><span>Send us your properties and dates. Not sure of one? We'll help you find it.</span></li>
-<li><b>2</b><span>We track your certificate dates to help you avoid hefty fines, and keep you up to date on regulation changes through our monthly newsletter.</span></li>
-<li><b>3</b><span>We remind you in good time. Reply with the new certificate and we set the next one.</span></li>
+<li><b>2</b><span>We track your certificate dates and keep you up to date on regulation changes through our monthly newsletter.</span></li>
+<li><b>3</b><span>We contact you in good time, before gas safety, EICR, EPC and other compliance dates are due. When something's due, we can also point you to registered local trades, like Gas Safe engineers, qualified electricians and EPC assessors, who can get it done. Reply with the new certificate and we set the next one.</span></li>
 </ol>
 <a class="more2" href="/how-it-works/">See a sample reminder and what you get &rsaquo;</a>
 </div></section>
@@ -158,6 +179,16 @@ footer a{color:var(--pale)}
 <p class="price">£15</p>
 <p class="per">per property, per month. HMOs included, 30 days' notice to stop.</p>
 <a class="more2" style="color:var(--pale)" href="/pricing/">Pricing and FAQs &rsaquo;</a>
+</div></section>
+<section id="savings"><div class="wrap">
+<p class="slogan">Self manage with confidence</p>
+<h2>Save thousands a year.</h2>
+<p class="lead">Landlords can save thousands a year by self-managing, instead of paying a letting agent's 10 to 15% full management fee.</p>
+<div class="savings">
+<div class="card"><h3>Full management fees</h3><span class="amt">10 to 15% of the rent</span><p>On a £1,000 a month let, that fee alone can be well over £1,000 a year, and it rises when the rent does.</p></div>
+<div class="card"><h3>Self-manage with Property Nudge</h3><span class="amt">£15 per property, per month</span><p>You don't even need to find tenants yourself. Use an agent's one-off tenant find service, then self-manage with Property Nudge supporting the admin.</p></div>
+</div>
+<p class="fine">Figures are illustrative. Full management fees vary by agent and property. Property Nudge is property administration, not a letting agent. We don't find tenants, collect rent or manage repairs. When something's due, we can also point you to registered local trades, like Gas Safe engineers, qualified electricians and EPC assessors, who can get it done.</p>
 </div></section>
 <section id="cost"><div class="wrap">
 <span class="warn">&#9888; Know the risks</span>
@@ -184,9 +215,9 @@ footer a{color:var(--pale)}
 <p class="fstory">I worked in property management and estate agency and kept seeing missed certificates. <a href="/about/">Read my story &rsaquo;</a></p>
 </div></section>
 <footer><div class="wrap">
-<p class="flinks"><a href="/how-it-works/">How it works</a> &middot; <a href="/pricing/">Pricing</a> &middot; <a href="/guides/">Guides</a> &middot; <a href="/events/">Local landlord events</a> &middot; <a href="/#cost">Risks</a> &middot; <a href="/newsletter/">Newsletter</a> &middot; <a href="/about/">About</a></p>
+<p class="flinks"><a href="/how-it-works/">How it works</a> &middot; <a href="/pricing/">Pricing</a> &middot; <a href="/guides/">Guides</a> &middot; <a href="/events/">Local landlord events</a> &middot; <a href="/#savings">Savings</a> &middot; <a href="/#cost">Risks</a> &middot; <a href="/newsletter/">Newsletter</a> &middot; <a href="/about/">About</a></p>
 <p><a href="/privacy/">Privacy</a></p>
-<p>Property Nudge</p>
+<p>Property Nudge. Self manage with confidence.</p>
 </div></footer>
 </body>
 </html>
