@@ -144,11 +144,14 @@ footer a{color:var(--pale)}
 .hero .slogan{animation:rise .9s ease both;animation-delay:.04s}
 #savings{background:linear-gradient(180deg,#eef6fc 0%,#f5f9fc 100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 #savings h2{color:var(--ink)}
-.savings{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:40px;text-align:left}
-.savings .card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--sky);box-shadow:0 10px 30px rgba(15,23,32,.06)}
-.savings .card .amt{display:block;font-size:1.6rem;font-weight:800;letter-spacing:-.02em;line-height:1.2;color:var(--deep);margin:2px 0 8px}
-#savings .fine{margin-top:28px;padding:14px 18px;background:#fff;border-left:4px solid var(--sky);border-radius:10px;text-align:left;color:var(--muted)}
-@media(max-width:640px){.savings{grid-template-columns:1fr}}
+.savings{margin:32px auto 0;padding:26px 32px 22px;text-align:left;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 10px 30px rgba(15,23,32,.06)}
+.savings ul{margin:0;padding:0;list-style:none}
+.savings li{position:relative;padding:10px 0 10px 26px;color:var(--ink);font-size:1.06rem;line-height:1.5}
+.savings li:first-child{padding-top:0}
+.savings li:last-child{padding-bottom:0}
+.savings li::before{content:"";position:absolute;left:0;top:.75em;width:9px;height:9px;border-radius:50%;background:var(--sky)}
+#savings .fine{margin:16px 0 0;padding:14px 0 0;background:none;border:0;border-top:1px solid var(--line);font-size:.8rem;line-height:1.45;text-align:left;color:var(--muted)}
+@media(max-width:640px){.savings{margin-top:28px;padding:22px 20px 18px}}
 </style>
 </head>
 <body>
@@ -185,10 +188,14 @@ footer a{color:var(--pale)}
 <h2>Save thousands a year.</h2>
 <p class="lead">Landlords can save thousands a year by self-managing, instead of paying a letting agent's 10 to 15% full management fee.</p>
 <div class="savings">
-<div class="card"><h3>Full management fees</h3><span class="amt">10 to 15% of the rent</span><p>On a £1,000 a month let, that fee alone can be well over £1,000 a year, and it rises when the rent does.</p></div>
-<div class="card"><h3>Self-manage with Property Nudge</h3><span class="amt">£15 per property, per month</span><p>You don't even need to find tenants yourself. Use an agent's one-off tenant find service, then self-manage with Property Nudge supporting the admin.</p></div>
+<ul>
+<li>Letting agents typically charge 10 to 15% of the rent for full management.</li>
+<li>On a £1,000 a month let, that's well over £1,000 a year, and it rises with the rent.</li>
+<li>Property Nudge is £15 per property per month.</li>
+<li>You don't even need to find tenants yourself. Use an agent's one-off tenant find, then self-manage with us supporting the admin.</li>
+</ul>
+<p class="fine">Figures are illustrative. Property Nudge is property administration, not a letting agent. When something's due, we can point you to registered trades, like Gas Safe engineers, qualified electricians and EPC assessors.</p>
 </div>
-<p class="fine">Figures are illustrative. Full management fees vary by agent and property. Property Nudge is property administration, not a letting agent. We don't find tenants, collect rent or manage repairs. When something's due, we can also point you to registered local trades, like Gas Safe engineers, qualified electricians and EPC assessors, who can get it done.</p>
 </div></section>
 <section id="cost"><div class="wrap">
 <span class="warn">&#9888; Know the risks</span>
