@@ -90,15 +90,29 @@ body{background:linear-gradient(180deg,#e8f3fb 0%,#f4f9fd 42%,#eef6fc 100%)}
 .field label,.choice{display:block;font-weight:600;font-size:.95rem;margin:0 0 6px;color:var(--navy)}
 .req{color:var(--deep);font-weight:700}
 .hint{display:block;font-weight:400;color:var(--muted);font-size:.88rem;margin-top:2px}
+.formcard,.signup .wrap,.group,.field,.row2,.row2 > *{min-width:0;max-width:100%}
+input{box-sizing:border-box}
 input[type=text],input[type=email],input[type=tel],input[type=date]{
-  width:100%;min-height:48px;padding:12px 14px;border:1px solid #d5dee8;border-radius:12px;
+  display:block;width:100%;max-width:100%;min-width:0;box-sizing:border-box;
+  min-height:48px;padding:12px 14px;border:1px solid #d5dee8;border-radius:12px;
   font:inherit;font-size:1rem;color:var(--ink);background:#fff;
   box-shadow:inset 0 1px 2px rgba(15,23,32,.04)
 }
+input[type=date]{
+  -webkit-appearance:none;appearance:none;
+  line-height:1.25;text-align:left;color:var(--ink)
+}
+input[type=date]::-webkit-date-and-time-value{text-align:left;min-height:1.25em;margin:0}
+input[type=date]::-webkit-datetime-edit,input[type=date]::-webkit-datetime-edit-fields-wrapper{min-width:0;padding:0}
+input[type=date]::-webkit-calendar-picker-indicator{cursor:pointer;opacity:.7;margin-left:auto}
+input[type=date].is-empty::-webkit-datetime-edit,
+input[type=date].is-empty::-webkit-date-and-time-value{color:transparent}
+input[type=date].is-empty::before{content:attr(placeholder);color:#8a93a3}
+input[type=date]:focus::before,input[type=date]:not(.is-empty)::before{content:none}
 input::placeholder{color:#8a93a3}
 input:hover{border-color:#b9c9d8}
 input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);outline:none}
-.row2{display:grid;grid-template-columns:1.3fr .9fr;gap:14px}
+.row2{display:grid;grid-template-columns:1.3fr .9fr;gap:14px;min-width:0}
 .choices{display:flex;flex-direction:column;gap:8px}
 .choices label{display:flex;align-items:flex-start;gap:10px;margin:0;font-weight:500;font-size:1rem;padding:12px 14px;border:1px solid #d5dee8;border-radius:12px;cursor:pointer;background:#fff;min-height:48px}
 .choices label:hover{border-color:var(--sky);background:#f7fbfe}
@@ -172,7 +186,7 @@ input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);ou
 
         <div class="field">
           <label for="tenancy">Tenancy start date</label>
-          <input id="tenancy" name="tenancy-date" type="date" autocomplete="off">
+          <input id="tenancy" name="tenancy-date" type="date" autocomplete="off" placeholder="dd/mm/yyyy">
         </div>
 
         <fieldset class="group">
@@ -185,20 +199,20 @@ input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);ou
         </fieldset>
         <div class="field" id="gas-expiry-wrap" hidden>
           <label for="gas-expiry">Gas safety certificate expiry date</label>
-          <input id="gas-expiry" name="gas-expiry-date" type="date">
+          <input id="gas-expiry" name="gas-expiry-date" type="date" placeholder="dd/mm/yyyy">
         </div>
 
         <div class="field">
           <label for="eicr">EICR date</label>
-          <input id="eicr" name="eicr-date" type="date">
+          <input id="eicr" name="eicr-date" type="date" placeholder="dd/mm/yyyy">
         </div>
         <div class="field">
           <label for="alarms">Last smoke and CO alarm check</label>
-          <input id="alarms" name="alarms-date" type="date">
+          <input id="alarms" name="alarms-date" type="date" placeholder="dd/mm/yyyy">
         </div>
         <div class="field">
           <label for="legionella">Last legionella risk review (if known)</label>
-          <input id="legionella" name="legionella-date" type="date">
+          <input id="legionella" name="legionella-date" type="date" placeholder="dd/mm/yyyy">
         </div>
 
         <fieldset class="group">
@@ -214,7 +228,7 @@ input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);ou
 
         <div class="field">
           <label for="rtr">Right to Rent check date</label>
-          <input id="rtr" name="rtr-date" type="date">
+          <input id="rtr" name="rtr-date" type="date" placeholder="dd/mm/yyyy">
         </div>
 
         <fieldset class="group">
@@ -271,6 +285,16 @@ input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);ou
   var gasWrap = document.getElementById("gas-expiry-wrap");
   var gasExpiry = document.getElementById("gas-expiry");
 
+  function syncDateHint(el) {
+    if (!el) return;
+    el.classList.toggle("is-empty", !el.value);
+  }
+  form.querySelectorAll('input[type="date"]').forEach(function (el) {
+    syncDateHint(el);
+    el.addEventListener("input", function () { syncDateHint(el); });
+    el.addEventListener("change", function () { syncDateHint(el); });
+    el.addEventListener("blur", function () { syncDateHint(el); });
+  });
   function selectedGas() {
     var picked = form.querySelector('input[name="entry.886049955"]:checked');
     return picked ? picked.value : "";
@@ -279,6 +303,7 @@ input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);ou
     var show = selectedGas() === "Yes";
     gasWrap.hidden = !show;
     if (!show) gasExpiry.value = "";
+    syncDateHint(gasExpiry);
   }
   form.querySelectorAll('input[name="entry.886049955"]').forEach(function (el) {
     el.addEventListener("change", syncGas);
