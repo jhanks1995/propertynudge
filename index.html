@@ -15,6 +15,8 @@
 <meta name="twitter:title" content="Property Nudge | Self manage with confidence">
 <meta name="twitter:description" content="Property Nudge is an admin service that tracks your compliance dates, contacts you before they're due and gives you the names of registered contractors to get the work done, so you can self manage with confidence. Based in Ringwood, covering the New Forest, Hampshire and Dorset. £15 per property per month.">
 <link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preload" as="image" href="/images/hero-door-keys.webp" type="image/webp" media="(min-width:1101px)">
+<link rel="preload" as="image" href="/images/hero-door-keys-mobile.webp" type="image/webp" media="(max-width:1100px)">
 <style>
 :root{--ink:#0f1720;--navy:#111827;--ch:#3a3a40;--muted:#5b6170;--sky:#44A6E3;--deep:#1f78bd;--pale:#9FD0F2;--line:rgba(15,23,32,.08)}
 *{box-sizing:border-box}
@@ -36,7 +38,16 @@ h3{letter-spacing:-.01em}
 .bar a.mini:hover{background:var(--deep)}
 .topban{background:var(--ink);color:#fff;text-align:center;font-size:.9rem;padding:9px 16px;line-height:1.3}.topban a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:3px}.topban a:hover{opacity:.85}@media(max-width:640px){.topban{font-size:.82rem;padding:8px 12px}}
 /* hero */
-.hero{padding:84px 0 96px;background:radial-gradient(ellipse 70% 55% at 50% 0%,rgba(68,166,227,.22),transparent 70%),linear-gradient(180deg,#eef6fc,#fbfcfe)}
+.hero{padding:0;background:#d7e6f2;text-align:left;overflow:hidden}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:right center;display:block}
+.hero::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(90deg,rgba(236,244,250,.9) 0%,rgba(236,244,250,.68) 32%,rgba(236,244,250,.2) 56%,rgba(236,244,250,0) 72%)}
+.hero .wrap{max-width:1120px;padding:68px 24px 72px;display:flex;align-items:center}
+.hero-copy{max-width:36rem;position:relative;z-index:1}
+.hero .logo{width:min(220px,70vw);margin:0}
+.hero h1{margin-top:20px;font-size:clamp(2.2rem,4vw,3.45rem)}
+.hero .lead,.hero .local{margin-left:0}
+@media(max-width:1100px){.hero{text-align:center;display:flex;flex-direction:column}.hero-media{position:relative;inset:auto;height:auto;order:2}.hero-media img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center}.hero::after{display:none}.hero .wrap{order:1;display:block;max-width:760px;padding:36px 24px 28px;text-align:center}.hero-copy{max-width:none}.hero .logo{margin:0 auto}.hero .lead,.hero .local{margin-left:auto;margin-right:auto}.hero .btn{margin-bottom:8px}}
 .orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;pointer-events:none;z-index:0}
 .o1{width:380px;height:380px;background:#9FD0F2;top:-80px;left:-120px}
 .o2{width:320px;height:320px;background:#44A6E3;opacity:.25;bottom:-120px;right:-80px}
@@ -161,14 +172,21 @@ footer a{color:var(--pale)}
 <body>
 <div class="topban">Free compliance check: <a href="/free-check/">eight questions, instant result</a></div>
 <nav class="bar"><div class="in"><a class="home" href="/"><img src="/pn-icon.png" alt="property nudge" width="50" height="50"></a><div class="r"><a class="nl" href="/how-it-works/">How it works</a><a class="nl" href="/pricing/">Pricing</a><a class="nl" href="/guides/">Guides</a><a class="nl" href="/free-check/">Free check</a><a class="nl" href="/about/">About</a><a class="mini" href="/sign-up/">Sign up</a></div><button class="menubtn" type="button" aria-label="Menu" aria-expanded="false" onclick="var b=this.closest('.bar');b.classList.toggle('open');this.setAttribute('aria-expanded',b.classList.contains('open'))"><span></span></button></div></nav>
-<section class="hero"><span class="orb o1"></span><span class="orb o2"></span><div class="wrap">
-<img class="logo" src="/logo.svg" alt="property nudge">
+<section class="hero">
+<picture class="hero-media">
+<source type="image/webp" media="(max-width:1100px)" srcset="/images/hero-door-keys-mobile.webp">
+<source type="image/jpeg" media="(max-width:1100px)" srcset="/images/hero-door-keys-mobile.jpg">
+<source type="image/webp" srcset="/images/hero-door-keys.webp">
+<img src="/images/hero-door-keys.jpg" alt="A hand holding house keys in front of a blue front door on a brick house" width="1280" height="720" fetchpriority="high" decoding="async">
+</picture>
+<div class="wrap"><div class="hero-copy">
+<img class="logo" src="/logo.svg" alt="property nudge" width="993" height="492">
 <p class="slogan">Self manage with confidence</p>
 <h1>Never miss a landlord<br><span class="grad">certificate date again.</span></h1>
 <p class="lead">Property Nudge is an admin service that tracks your compliance dates, contacts you before they're due and gives you the names of registered contractors to get the work done, so you can self manage with confidence.</p>
 <p class="local">Based in Ringwood, covering the New Forest, Hampshire and Dorset. £15 per property per month, with 30 days' notice.</p>
 <a class="btn" href="/sign-up/">Sign up</a>
-</div></section>
+</div></div></section>
 <section class="grey"><div class="wrap">
 <h2>How it works.</h2>
 <ol class="steps">

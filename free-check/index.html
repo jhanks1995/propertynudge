@@ -126,6 +126,10 @@ footer a{color:var(--pale)}
   .btn,.cta .btn{width:100%;max-width:none}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+.formcard .illu{margin:18px auto 6px;max-width:420px}
+.illu img{width:100%;height:auto;display:block}
+.formcard.is-results .illu{display:none}
 </style>
 </head>
 <body>
@@ -139,6 +143,12 @@ footer a{color:var(--pale)}
     <p class="slogan">Self manage with confidence</p>
     <p class="lead">Eight quick questions, then an instant result on this page.</p>
     <p class="intro">This is a simple sense check for private landlords in England, in plain English. It is general information, not legal advice, and it is not a formal inspection. You can change your answers at any time. Nothing is stored unless you choose to email a copy to yourself.</p>
+
+    <div class="illu"><picture>
+    <source type="image/webp" srcset="/images/illustration-calendar-640.webp 640w, /images/illustration-calendar.webp 1000w" sizes="(max-width:680px) min(420px, calc(100vw - 84px)), 420px">
+    <source type="image/jpeg" srcset="/images/illustration-calendar-640.jpg 640w, /images/illustration-calendar.jpg 1000w" sizes="(max-width:680px) min(420px, calc(100vw - 84px)), 420px">
+    <img src="/images/illustration-calendar.jpg" alt="Illustration of a house, a calendar with completed checks and a compliance certificate" width="1000" height="442" loading="lazy" decoding="async">
+    </picture></div>
 
     <noscript><p class="formerr show">This check needs JavaScript to show your result on the page. You can still read our <a href="/guides/">landlord guides</a>, or <a href="/sign-up/">sign up</a> and we will help you go through the dates.</p></noscript>
 

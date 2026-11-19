@@ -140,6 +140,9 @@ footer a{color:var(--pale)}
 .savings .card .amt{display:block;font-size:1.6rem;font-weight:800;letter-spacing:-.02em;line-height:1.2;color:var(--deep);margin:2px 0 8px}
 #savings .fine{margin-top:28px;padding:14px 18px;background:#fff;border-left:4px solid var(--sky);border-radius:10px;text-align:left;color:var(--muted)}
 @media(max-width:640px){.savings{grid-template-columns:1fr}}
+
+.shot{margin:36px auto 8px;max-width:640px}
+.shot img{width:100%;height:auto;display:block;border-radius:22px;box-shadow:0 0 0 1px var(--line),0 12px 32px -12px rgba(15,23,32,.14)}
 </style>
 </head>
 <body>
@@ -153,6 +156,11 @@ footer a{color:var(--pale)}
 <li><b>2</b><span>We track your certificate dates and keep you up to date on regulation changes through our monthly newsletter.</span></li>
 <li><b>3</b><span>We contact you in good time, before gas safety, EICR, EPC and other compliance dates are due. When something's due, we can also point you to registered local trades, like Gas Safe engineers, qualified electricians and EPC assessors, who can get it done. Reply with the new certificate and we set the next one.</span></li>
 </ol>
+<div class="shot"><picture>
+<source type="image/webp" srcset="/images/landlord-reminder-640.webp 640w, /images/landlord-reminder.webp 1152w" sizes="(max-width:700px) calc(100vw - 48px), 640px">
+<source type="image/jpeg" srcset="/images/landlord-reminder-640.jpg 640w, /images/landlord-reminder.jpg 1152w" sizes="(max-width:700px) calc(100vw - 48px), 640px">
+<img src="/images/landlord-reminder.jpg" alt="A landlord sitting at a kitchen table, holding a mug and checking a reminder on his phone" width="1152" height="864" loading="lazy" decoding="async">
+</picture></div>
 <div class="sample"><p class="slabel">A sample reminder</p><div class="mail"><div class="mh"><span>From</span> Property Nudge &lt;propertynudge@gmail.com&gt;<br><span>Subject</span> <b>Gas safety check due in 30 days: 14 Example Road, Ringwood</b></div><div class="mb"><p>Dear Sam,</p><p>This is your one-month reminder: the gas safety record for 14 Example Road, Ringwood runs out on 12 December. If you have already booked the engineer, wonderful. Just reply with the date and we will not chase you.</p><p><b>What to do:</b></p><ol><li>Book a Gas Safe registered engineer for the annual gas safety check.</li><li>Let your tenant know the date and time.</li><li>Give your tenant a copy of the new record within 28 days of the check.</li><li>Send us a copy by replying to this email. We will log it and set your next reminder.</li></ol><p>Jack<br>Property Nudge</p></div></div><p class="sfine">Example only. Every reminder uses the dates on your own properties.</p></div>
 
 </div></section>

@@ -143,11 +143,22 @@ footer a{color:var(--pale)}
 .savings li::before{content:"";position:absolute;left:0;top:.75em;width:9px;height:9px;border-radius:50%;background:var(--sky)}
 #savings .fine{margin:16px 0 0;padding:14px 0 0;background:none;border:0;border-top:1px solid var(--line);font-size:.8rem;line-height:1.45;text-align:left;color:var(--muted)}
 @media(max-width:640px){.savings{margin-top:28px;padding:22px 20px 18px}}
+
+.visintro{padding:24px 0 0;background:#fbfcfe}
+.visintro .illu{max-width:520px;margin:0 auto}
+.illu img{width:100%;height:auto;display:block}
 </style>
 </head>
 <body>
 <div class="topban">Free compliance check: <a href="/free-check/">eight questions, instant result</a></div>
 <nav class="bar"><div class="in"><a class="home" href="/"><img src="/pn-icon.png" alt="property nudge" width="50" height="50"></a><div class="r"><a class="nl" href="/how-it-works/">How it works</a><a class="nl on" href="/pricing/">Pricing</a><a class="nl" href="/guides/">Guides</a><a class="nl" href="/free-check/">Free check</a><a class="nl" href="/about/">About</a><a class="mini" href="/sign-up/">Sign up</a></div><button class="menubtn" type="button" aria-label="Menu" aria-expanded="false" onclick="var b=this.closest('.bar');b.classList.toggle('open');this.setAttribute('aria-expanded',b.classList.contains('open'))"><span></span></button></div></nav>
+<section class="visintro"><div class="wrap">
+<div class="illu"><picture>
+<source type="image/webp" srcset="/images/illustration-calendar-640.webp 640w, /images/illustration-calendar.webp 1000w" sizes="(max-width:560px) calc(100vw - 48px), 520px">
+<source type="image/jpeg" srcset="/images/illustration-calendar-640.jpg 640w, /images/illustration-calendar.jpg 1000w" sizes="(max-width:560px) calc(100vw - 48px), 520px">
+<img src="/images/illustration-calendar.jpg" alt="Illustration of a house, a calendar with completed checks and a compliance certificate" width="1000" height="442">
+</picture></div>
+</div></section>
 <section id="price"><div class="wrap">
 <h2>One simple price.</h2>
 <p class="slogan" style="color:#9FD0F2">Self manage with confidence</p>
