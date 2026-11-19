@@ -41,11 +41,16 @@ h3{letter-spacing:-.01em}
 .hero{padding:84px 0 96px;background:#e8f1f8;text-align:center;overflow:hidden}
 .hero-media{position:absolute;inset:0;z-index:0}
 .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block}
-.hero::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 92% 100% at 50% 42%,rgba(251,252,254,.97) 0%,rgba(251,252,254,.94) 40%,rgba(251,252,254,.88) 72%,rgba(251,252,254,.80) 100%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:rgba(251,252,254,.4)}
 .hero-copy{position:relative;z-index:1}
-.hero .grad{background:linear-gradient(100deg,#1668a3 0%,#1a6fae 55%,#1f78bd 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero .slogan{color:#1668a3}
-@media(max-width:640px){.hero{padding:56px 0 64px}}
+.hero-copy::before{content:"";position:absolute;z-index:-1;pointer-events:none;inset:-36px -48px;background:radial-gradient(ellipse 70% 58% at 50% 36%,rgba(255,255,255,.9) 0%,rgba(255,255,255,.68) 40%,rgba(255,255,255,.3) 70%,rgba(255,255,255,0) 100%)}
+.hero h1{filter:drop-shadow(0 0 16px rgba(255,255,255,.97)) drop-shadow(0 1px 2px rgba(255,255,255,.95))}
+.hero .slogan{color:#1668a3;text-shadow:0 0 14px #fff,0 0 4px #fff,0 1px 0 rgba(255,255,255,.9)}
+.hero .grad{background:linear-gradient(100deg,#1668a3 0%,#1768a5 55%,#1869a8 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-note{max-width:580px;margin:18px auto 0;padding:16px 22px 18px;border-radius:18px;background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.hero-note .lead{margin-top:0;max-width:none}
+.hero-note .local{margin-top:10px}
+@media(max-width:640px){.hero{padding:56px 0 64px}.hero-copy::before{inset:-16px -8px}.hero-note{padding:14px 16px 16px}}
 .orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;pointer-events:none;z-index:0}
 .o1{width:380px;height:380px;background:#9FD0F2;top:-80px;left:-120px}
 .o2{width:320px;height:320px;background:#44A6E3;opacity:.25;bottom:-120px;right:-80px}
@@ -181,8 +186,10 @@ footer a{color:var(--pale)}
 <img class="logo" src="/logo.svg" alt="property nudge" width="993" height="492">
 <p class="slogan">Self manage with confidence</p>
 <h1>Never miss a landlord<br><span class="grad">certificate date again.</span></h1>
+<div class="hero-note">
 <p class="lead">Property Nudge is an admin service that tracks your compliance dates, contacts you before they're due and gives you the names of registered contractors to get the work done, so you can self manage with confidence.</p>
 <p class="local">Based in Ringwood, covering the New Forest, Hampshire and Dorset. £15 per property per month, with 30 days' notice.</p>
+</div>
 <a class="btn" href="/sign-up/">Sign up</a>
 </div></div></section>
 <section class="grey"><div class="wrap">
