@@ -38,19 +38,21 @@ h3{letter-spacing:-.01em}
 .bar a.mini:hover{background:var(--deep)}
 .topban{background:var(--ink);color:#fff;text-align:center;font-size:.9rem;padding:9px 16px;line-height:1.3}.topban a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:3px}.topban a:hover{opacity:.85}@media(max-width:640px){.topban{font-size:.82rem;padding:8px 12px}}
 /* hero */
-.hero{padding:84px 0 96px;background:#e8f1f8;text-align:center;overflow:hidden}
+.hero{padding:76px 0 80px;background:#e8f1f8;text-align:center;overflow:hidden}
 .hero-media{position:absolute;inset:0;z-index:0}
 .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block}
 .hero::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:rgba(251,252,254,.4)}
 .hero-copy{position:relative;z-index:1}
-.hero-copy::before{content:"";position:absolute;z-index:-1;pointer-events:none;inset:-36px -48px;background:radial-gradient(ellipse 70% 58% at 50% 36%,rgba(255,255,255,.9) 0%,rgba(255,255,255,.68) 40%,rgba(255,255,255,.3) 70%,rgba(255,255,255,0) 100%)}
+.hero-copy::before{content:"";position:absolute;z-index:-1;pointer-events:none;inset:-32px -44px;background:radial-gradient(ellipse 72% 64% at 50% 42%,rgba(255,255,255,.9) 0%,rgba(255,255,255,.68) 40%,rgba(255,255,255,.3) 70%,rgba(255,255,255,0) 100%)}
 .hero h1{filter:drop-shadow(0 0 16px rgba(255,255,255,.97)) drop-shadow(0 1px 2px rgba(255,255,255,.95))}
 .hero .slogan{color:#1668a3;text-shadow:0 0 14px #fff,0 0 4px #fff,0 1px 0 rgba(255,255,255,.9)}
 .hero .grad{background:linear-gradient(100deg,#1668a3 0%,#1768a5 55%,#1869a8 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero-note{max-width:580px;margin:18px auto 0;padding:16px 22px 18px;border-radius:18px;background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
-.hero-note .lead{margin-top:0;max-width:none}
-.hero-note .local{margin-top:10px}
-@media(max-width:640px){.hero{padding:56px 0 64px}.hero-copy::before{inset:-16px -8px}.hero-note{padding:14px 16px 16px}}
+@media(max-width:640px){.hero{padding:52px 0 56px}.hero-copy::before{inset:-16px -8px}}
+.intro{padding:40px 0 0;background:#f3f6fa}
+.intro-card{max-width:620px;margin:0 auto;padding:28px 32px;background:#fff;border-radius:22px;box-shadow:0 0 0 1px var(--line),0 2px 4px rgba(15,23,32,.03),0 12px 32px -12px rgba(15,23,32,.12)}
+.intro-card .lead{margin-top:0;max-width:none}
+.intro-card .local{margin-top:12px}
+@media(max-width:640px){.intro{padding:28px 0 0}.intro-card{padding:22px 20px}}
 .orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;pointer-events:none;z-index:0}
 .o1{width:380px;height:380px;background:#9FD0F2;top:-80px;left:-120px}
 .o2{width:320px;height:320px;background:#44A6E3;opacity:.25;bottom:-120px;right:-80px}
@@ -186,12 +188,14 @@ footer a{color:var(--pale)}
 <img class="logo" src="/logo.svg" alt="property nudge" width="993" height="492">
 <p class="slogan">Self manage with confidence</p>
 <h1>Never miss a landlord<br><span class="grad">certificate date again.</span></h1>
-<div class="hero-note">
+<a class="btn" href="/sign-up/">Sign up</a>
+</div></div></section>
+<section class="intro"><div class="wrap">
+<div class="intro-card">
 <p class="lead">Property Nudge is an admin service that tracks your compliance dates, contacts you before they're due and gives you the names of registered contractors to get the work done, so you can self manage with confidence.</p>
 <p class="local">Based in Ringwood, covering the New Forest, Hampshire and Dorset. £15 per property per month, with 30 days' notice.</p>
 </div>
-<a class="btn" href="/sign-up/">Sign up</a>
-</div></div></section>
+</div></section>
 <section class="grey"><div class="wrap">
 <h2>How it works.</h2>
 <ol class="steps">
