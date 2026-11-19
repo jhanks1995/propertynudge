@@ -162,7 +162,7 @@ footer a{color:var(--pale)}
 .tier .tier-price{font-size:clamp(2.2rem,4vw,3.1rem);font-weight:800;letter-spacing:-.04em;line-height:1.05;margin:14px 0 0;color:var(--ink)}
 .tier .tier-per{margin:6px 0 0;color:var(--muted);font-size:.98rem}
 .tier .tier-example{margin:14px 0 0;color:var(--ch);font-size:.98rem}
-.tier .tier-terms{margin:18px 0 0;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;line-height:1.45}
+.tier-terms{max-width:560px;margin:22px auto 0;color:var(--muted);font-size:.98rem;line-height:1.45;text-align:center}
 .calc{max-width:520px;margin:36px auto 0;padding:22px 24px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 0 0 1px var(--line),0 8px 24px -12px rgba(15,23,32,.1);text-align:center}
 .calc label{display:block;font-weight:600;font-size:1.02rem}
 .calc input{width:120px;margin:12px auto 0;display:block;font-size:1.2rem;font-weight:700;text-align:center;padding:10px 12px;border:1px solid var(--line);border-radius:12px;color:var(--ink);background:#fbfcfe}
@@ -201,7 +201,6 @@ footer a{color:var(--pale)}
 <p class="tier-price">£14.99</p>
 <p class="tier-per">per property, per month</p>
 <p class="tier-example">2 properties = £29.98 a month</p>
-<p class="tier-terms">Monthly standing order. 30 days' notice to stop, and you stay in charge. Everything is included.</p>
 </article>
 <article class="tier tier-popular">
 <p class="tier-badge">Most popular</p>
@@ -209,16 +208,15 @@ footer a{color:var(--pale)}
 <p class="tier-price">£10.99</p>
 <p class="tier-per">per property, per month</p>
 <p class="tier-example">4 properties = £43.96 a month</p>
-<p class="tier-terms">Monthly standing order. 30 days' notice to stop, and you stay in charge. Everything is included.</p>
 </article>
 <article class="tier">
 <h3>6 or more properties</h3>
 <p class="tier-price">£9.99</p>
 <p class="tier-per">per property, per month</p>
 <p class="tier-example">8 properties = £79.92 a month</p>
-<p class="tier-terms">Monthly standing order. 30 days' notice to stop, and you stay in charge. Everything is included.</p>
 </article>
 </div>
+<p class="tier-terms">Monthly standing order. 30 days' notice to stop, and you stay in charge. Everything is included.</p>
 <div class="calc">
 <label for="props">How many properties do you have?</label>
 <input id="props" name="props" type="number" min="1" max="99" step="1" inputmode="numeric" value="1" aria-describedby="calc-out">
