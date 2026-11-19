@@ -170,6 +170,18 @@ footer a{color:var(--pale)}
 .checkline{margin:22px auto 0;color:var(--muted);font-size:1.06rem}
 .checkline a{font-weight:600;text-decoration:none}
 .checkline a:hover{text-decoration:underline}
+
+.explore{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding:0;margin:0}
+.tile{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;color:#fff;text-decoration:none;min-height:140px}
+.tile picture,.tile img{width:100%;height:100%;display:block}
+.tile img{object-fit:cover;transform:scale(1.001);transition:transform .55s ease}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,23,32,.5) 0%,rgba(15,23,32,.34) 45%,rgba(15,23,32,.28) 100%);pointer-events:none}
+.tile-label{position:absolute;inset:0;z-index:1;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px 18px;font-family:Georgia,"Palatino Linotype",Palatino,"Times New Roman",serif;font-size:clamp(1.05rem,1.8vw,1.55rem);font-weight:500;letter-spacing:.01em;line-height:1.25;text-shadow:0 1px 2px rgba(0,0,0,.45),0 2px 18px rgba(0,0,0,.35)}
+@media(hover:hover){.tile:hover img{transform:scale(1.06)}}
+.tile:focus-visible{outline:3px solid var(--pale);outline-offset:-3px;z-index:2}
+@media(max-width:900px){.explore{grid-template-columns:1fr 1fr}.tile-label{font-size:clamp(1rem,3.2vw,1.35rem);padding:14px 12px}}
+@media(max-width:520px){.tile{min-height:120px}.tile-label{font-size:1rem;padding:12px 10px}}
+@media(prefers-reduced-motion:reduce){.tile img{transition:none}.tile:hover img{transform:none}}
 </style>
 </head>
 <body>
@@ -201,16 +213,56 @@ footer a{color:var(--pale)}
 </ol>
 <a class="more2" href="/how-it-works/">See a sample reminder and what you get &rsaquo;</a>
 </div></section>
-<section id="price" class="band"><div class="wrap">
-<h2>One simple price.</h2>
-<p class="price">£15</p>
-<p class="per">per property, per month. HMOs included, 30 days' notice to stop.</p>
-<a class="more2" style="color:var(--pale)" href="/pricing/">Pricing and FAQs &rsaquo;</a>
-</div></section>
-<section><div class="wrap">
-<a class="btn" style="margin-top:0" href="/sign-up/">Sign up</a>
-<p class="checkline">Not sure where you stand? Try the <a href="/free-check/">free compliance check</a>.</p>
-</div></section>
+<section class="explore" aria-label="Explore Property Nudge">
+<a class="tile" href="/how-it-works/">
+<picture>
+<source type="image/webp" srcset="/images/tiles/tile-heath-800.webp 800w, /images/tiles/tile-heath.webp 1280w" sizes="(max-width:900px) 50vw, 33vw">
+<source type="image/jpeg" srcset="/images/tiles/tile-heath-800.jpg 800w, /images/tiles/tile-heath.jpg 1280w" sizes="(max-width:900px) 50vw, 33vw">
+<img src="/images/tiles/tile-heath.jpg" alt="A New Forest heath under a pale sky, with ponies grazing among gorse and heather" width="1280" height="720" loading="lazy" decoding="async">
+</picture>
+<span class="tile-label">How it works</span>
+</a>
+<a class="tile" href="/pricing/">
+<picture>
+<source type="image/webp" srcset="/images/tiles/tile-ringwood-800.webp 800w, /images/tiles/tile-ringwood.webp 1280w" sizes="(max-width:900px) 50vw, 33vw">
+<source type="image/jpeg" srcset="/images/tiles/tile-ringwood-800.jpg 800w, /images/tiles/tile-ringwood.jpg 1280w" sizes="(max-width:900px) 50vw, 33vw">
+<img src="/images/tiles/tile-ringwood.jpg" alt="A quiet market town street of brick and painted shopfronts" width="1280" height="720" loading="lazy" decoding="async">
+</picture>
+<span class="tile-label">Pricing: £15 a month</span>
+</a>
+<a class="tile" href="/free-check/">
+<picture>
+<source type="image/webp" srcset="/images/tiles/tile-terrace-800.webp 800w, /images/tiles/tile-terrace.webp 1280w" sizes="(max-width:900px) 50vw, 33vw">
+<source type="image/jpeg" srcset="/images/tiles/tile-terrace-800.jpg 800w, /images/tiles/tile-terrace.jpg 1280w" sizes="(max-width:900px) 50vw, 33vw">
+<img src="/images/tiles/tile-terrace.jpg" alt="A brick terraced street of houses in soft daylight" width="1280" height="720" loading="lazy" decoding="async">
+</picture>
+<span class="tile-label">Free compliance check</span>
+</a>
+<a class="tile" href="/guides/">
+<picture>
+<source type="image/webp" srcset="/images/tiles/tile-avon-800.webp 800w, /images/tiles/tile-avon.webp 1280w" sizes="(max-width:900px) 50vw, 33vw">
+<source type="image/jpeg" srcset="/images/tiles/tile-avon-800.jpg 800w, /images/tiles/tile-avon.jpg 1280w" sizes="(max-width:900px) 50vw, 33vw">
+<img src="/images/tiles/tile-avon.jpg" alt="The River Avon flowing past trees and grassy banks" width="1280" height="720" loading="lazy" decoding="async">
+</picture>
+<span class="tile-label">Landlord guides</span>
+</a>
+<a class="tile" href="/about/">
+<picture>
+<source type="image/webp" srcset="/images/tiles/tile-beach-huts-800.webp 800w, /images/tiles/tile-beach-huts.webp 1280w" sizes="(max-width:900px) 50vw, 33vw">
+<source type="image/jpeg" srcset="/images/tiles/tile-beach-huts-800.jpg 800w, /images/tiles/tile-beach-huts.jpg 1280w" sizes="(max-width:900px) 50vw, 33vw">
+<img src="/images/tiles/tile-beach-huts.jpg" alt="Colourful beach huts on a Dorset shore, with a calm sea beyond" width="1280" height="720" loading="lazy" decoding="async">
+</picture>
+<span class="tile-label">About us</span>
+</a>
+<a class="tile" href="/sign-up/">
+<picture>
+<source type="image/webp" srcset="/images/tiles/tile-woodland-800.webp 800w, /images/tiles/tile-woodland.webp 1280w" sizes="(max-width:900px) 50vw, 33vw">
+<source type="image/jpeg" srcset="/images/tiles/tile-woodland-800.jpg 800w, /images/tiles/tile-woodland.jpg 1280w" sizes="(max-width:900px) 50vw, 33vw">
+<img src="/images/tiles/tile-woodland.jpg" alt="An autumn woodland path through beech trees" width="1280" height="720" loading="lazy" decoding="async">
+</picture>
+<span class="tile-label">Sign up</span>
+</a>
+</section>
 
 <footer><div class="wrap">
 <p class="flinks"><a href="/how-it-works/">How it works</a> &middot; <a href="/pricing/">Pricing</a> &middot; <a href="/guides/">Guides</a> &middot; <a href="/free-check/">Free compliance check</a> &middot; <a href="/events/">Local landlord events</a> &middot; <a href="/pricing/#savings">Savings</a> &middot; <a href="/pricing/#cost">Risks</a> &middot; <a href="/newsletter/">Newsletter</a> &middot; <a href="/about/">About</a></p>
