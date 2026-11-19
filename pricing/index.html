@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pricing | Property Nudge</title>
-<meta name="description" content="Property Nudge costs £14.99 per property, per month, HMOs included. Self-manage with a one-off tenant find service and save on full management fees. Self manage with confidence.">
+<meta name="description" content="Property Nudge costs from £9.99 to £14.99 per property, per month, with a lower rate on every property once you reach that band. HMOs included. Self manage with confidence.">
 <link rel="canonical" href="https://propertynudge.uk/pricing/">
 <link rel="icon" type="image/png" href="/favicon.png">
 <style>
@@ -147,6 +147,38 @@ footer a{color:var(--pale)}
 .visintro{padding:24px 0 0;background:#fbfcfe}
 .visintro .illu{max-width:520px;margin:0 auto}
 .illu img{width:100%;height:auto;display:block}
+
+/* tiered pricing preview */
+#price{background:#f3f6fa;color:var(--ink);padding:56px 0 72px}
+#price h2{color:var(--ink)}
+#price .slogan{color:var(--deep)}
+#price .wrap.wide{max-width:1080px}
+#price .lead{max-width:640px;color:var(--muted)}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:40px 0 0;align-items:stretch}
+.tier{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 0 0 1px var(--line),0 2px 4px rgba(15,23,32,.03),0 12px 32px -12px rgba(15,23,32,.12);padding:28px 24px 26px;text-align:center}
+.tier-popular{border:2px solid var(--sky);box-shadow:0 0 0 1px rgba(68,166,227,.25),0 12px 32px -10px rgba(47,134,200,.28);padding-top:36px}
+.tier-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(180deg,#4fb0ea,#2f8fd3);color:#fff;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:6px 12px;border-radius:999px;white-space:nowrap}
+.tier h3{margin:0;font-size:1.05rem;color:var(--ink);font-weight:700}
+.tier .tier-price{font-size:clamp(2.2rem,4vw,3.1rem);font-weight:800;letter-spacing:-.04em;line-height:1.05;margin:14px 0 0;color:var(--ink)}
+.tier .tier-per{margin:6px 0 0;color:var(--muted);font-size:.98rem}
+.tier .tier-example{margin:14px 0 0;color:var(--ch);font-size:.98rem}
+.tier .tier-terms{margin:18px 0 0;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;line-height:1.45}
+.calc{max-width:520px;margin:36px auto 0;padding:22px 24px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 0 0 1px var(--line),0 8px 24px -12px rgba(15,23,32,.1);text-align:center}
+.calc label{display:block;font-weight:600;font-size:1.02rem}
+.calc input{width:120px;margin:12px auto 0;display:block;font-size:1.2rem;font-weight:700;text-align:center;padding:10px 12px;border:1px solid var(--line);border-radius:12px;color:var(--ink);background:#fbfcfe}
+.calc input:focus{outline:3px solid var(--pale);outline-offset:2px;border-color:var(--sky)}
+.calc-out{margin:12px 0 0;color:var(--ink);font-size:1.08rem;font-weight:600}
+#price .agentbox{max-width:640px;margin:36px auto 0;padding:24px 28px;background:#fff;border:1px solid var(--line);border-radius:18px;text-align:left;box-shadow:0 0 0 1px var(--line),0 8px 24px -12px rgba(15,23,32,.08)}
+#price .agentbox h3{margin:0 0 10px;color:var(--ink);font-size:1.15rem}
+#price .agentbox p{margin:0 0 10px;color:#2b3340;font-size:1.04rem}
+#price .agentbox p:last-child{margin-bottom:0}
+#price .note{color:var(--muted);font-size:1.02rem;max-width:640px;margin:18px auto 0}
+.launch-note{max-width:760px;margin:0 auto;padding:22px 24px;background:#fff;border:1px dashed var(--line);border-radius:16px;text-align:left;color:var(--muted);font-size:.92rem}
+.launch-note h3{margin:0 0 8px;font-size:1rem;color:var(--ink)}
+.launch-note ul{margin:8px 0 0;padding-left:20px}
+.launch-note li{padding:2px 0}
+@media(max-width:800px){.tiers{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto}.tier-popular{padding-top:36px}}
+@media(max-width:640px){#price{padding:40px 0 56px}.calc{padding:18px 16px}.calc input{min-height:48px}}
 </style>
 </head>
 <body>
@@ -159,13 +191,41 @@ footer a{color:var(--pale)}
 <img src="/images/illustration-calendar.jpg" alt="Illustration of a house, a calendar with completed checks and a compliance certificate" width="1000" height="442">
 </picture></div>
 </div></section>
-<section id="price"><div class="wrap">
-<h2>One simple price.</h2>
-<p class="slogan" style="color:#9FD0F2">Self manage with confidence</p>
-<p class="price">£14.99</p>
-<p class="per">per property, per month</p>
-<p class="note">Monthly standing order. 30 days' notice to stop, and you stay in charge.</p>
-<div class="agentbox"><h3>Already paying an agent?</h3><p>Most full management fees are 10 to 15% of the rent, so they rise when the rent does. On a £1,000 a month let, that can be well over £1,000 a year. Property Nudge is £14.99 per property, per month, HMOs included.</p><p>You don't even need to find tenants yourself. Keep your agent for a one-off tenant find, then self-manage with Property Nudge supporting the admin. We contact you before each certificate and licence date is due, so nothing slips. When something's due, we can also point you to registered local trades, like Gas Safe engineers, qualified electricians and EPC assessors, who can get it done. We don't manage tenants, repairs or rent.</p></div>
+<section id="price"><div class="wrap wide">
+<h2>Simple monthly prices.</h2>
+<p class="slogan">Self manage with confidence</p>
+<p class="lead">The lower rate applies to every property once you reach that band, not just the extra ones. An HMO counts as one property, whatever the number of rooms.</p>
+<div class="tiers">
+<article class="tier">
+<h3>1 to 2 properties</h3>
+<p class="tier-price">£14.99</p>
+<p class="tier-per">per property, per month</p>
+<p class="tier-example">2 properties = £29.98 a month</p>
+<p class="tier-terms">Monthly standing order. 30 days' notice to stop, and you stay in charge. Everything is included.</p>
+</article>
+<article class="tier tier-popular">
+<p class="tier-badge">Most popular</p>
+<h3>3 to 5 properties</h3>
+<p class="tier-price">£10.99</p>
+<p class="tier-per">per property, per month</p>
+<p class="tier-example">4 properties = £43.96 a month</p>
+<p class="tier-terms">Monthly standing order. 30 days' notice to stop, and you stay in charge. Everything is included.</p>
+</article>
+<article class="tier">
+<h3>6 or more properties</h3>
+<p class="tier-price">£9.99</p>
+<p class="tier-per">per property, per month</p>
+<p class="tier-example">8 properties = £79.92 a month</p>
+<p class="tier-terms">Monthly standing order. 30 days' notice to stop, and you stay in charge. Everything is included.</p>
+</article>
+</div>
+<div class="calc">
+<label for="props">How many properties do you have?</label>
+<input id="props" name="props" type="number" min="1" max="99" step="1" inputmode="numeric" value="1" aria-describedby="calc-out">
+<p class="calc-out" id="calc-out" aria-live="polite">1 property at £14.99 each is £14.99 a month.</p>
+</div>
+<a class="btn" href="/sign-up/">Sign up</a>
+<div class="agentbox"><h3>Already paying an agent?</h3><p>Most full management fees are 10 to 15% of the rent, so they rise when the rent does. On a £1,000 a month let, that can be well over £1,000 a year. Property Nudge is from £9.99 to £14.99 per property, per month, with a lower rate on every property once you reach that band. An HMO counts as one property.</p><p>You don't even need to find tenants yourself. Keep your agent for a one-off tenant find, then self-manage with Property Nudge supporting the admin. We contact you before each certificate and licence date is due, so nothing slips. When something's due, we can also point you to registered local trades, like Gas Safe engineers, qualified electricians and EPC assessors, who can get the work done. We don't manage tenants, repairs or rent.</p></div>
 </div></section>
 <section id="savings"><div class="wrap">
 <p class="slogan">Self manage with confidence</p>
@@ -175,7 +235,7 @@ footer a{color:var(--pale)}
 <ul>
 <li>Letting agents typically charge 10 to 15% of the rent for full management.</li>
 <li>On a £1,000 a month let, that's well over £1,000 a year, and it rises with the rent.</li>
-<li>Property Nudge is £14.99 per property, per month.</li>
+<li>Property Nudge is from £9.99 to £14.99 per property, per month, with a lower rate on every property once you reach that band.</li>
 <li>You don't even need to find tenants yourself. Use an agent's one-off tenant find, then self-manage with us supporting the admin.</li>
 </ul>
 <p class="fine">Figures are illustrative. Property Nudge is property administration, not a letting agent. When something's due, we can point you to registered trades, like Gas Safe engineers, qualified electricians and EPC assessors.</p>
@@ -204,7 +264,21 @@ footer a{color:var(--pale)}
 <div><h3>Are you a letting agent?</h3><p>No. We don't find tenants, collect rent or manage properties.</p></div>
 <div><h3>Do you book the inspections?</h3><p>No. We contact you when a check is due, and you book your own engineer or assessor. If you need one, we can point you to registered local trades, like Gas Safe engineers, qualified electricians and EPC assessors.</p></div>
 <div><h3>Do you give legal advice?</h3><p>No. Our updates are general information with links to GOV.UK.</p></div>
+<div><h3>How do the rates work?</h3><p>The lower rate applies to every property once you reach that band, not just the extra ones. An HMO counts as one property, whatever the number of rooms.</p></div>
+<div><h3>Is there a free month?</h3><p>No. You pay the monthly rate from the start, with 30 days' notice to stop.</p></div>
 <div><h3>Can I stop?</h3><p>Yes, any time with 30 days' notice.</p></div>
+</div>
+</div></section>
+<section class="grey" id="launch-note"><div class="wrap">
+<div class="launch-note">
+<h3>Before this goes live</h3>
+<p>This page is a preview only. If Jack approves it, these other places would also need the new rates. They have not been changed yet.</p>
+<ul>
+<li>Website: the homepage intro line and meta descriptions, About, How it works, Sign up (including "what happens next"), Free check, the newsletter page, and the five guide page sign-up lines.</li>
+<li>Website PDFs: checklist.pdf and hmo-checklist.pdf, plus the matching leaflet copies in the local business documents folder.</li>
+<li>Local templates: welcome emails, the sign-up form, terms of service, the landlord invite, the onboarding procedure, and the Facebook/LinkedIn about draft.</li>
+<li>Browser or app only: the Google Form description, LinkedIn and Facebook Page intro and about, the inbox-watch checklist auto-reply, the month 2 posts Google Doc and its posting routine, the client tracker default price, Stripe if used, and any unsent drafts that still quote a single price.</li>
+</ul>
 </div>
 </div></section>
 <footer><div class="wrap">
@@ -213,5 +287,27 @@ footer a{color:var(--pale)}
 <p>Property Nudge. Self manage with confidence.</p>
 <p>Property Nudge Ltd, registered in England and Wales, company number 17565393.</p>
 </div></footer>
+
+<script>
+(function(){
+  var input=document.getElementById('props');
+  var out=document.getElementById('calc-out');
+  if(!input||!out) return;
+  function rate(n){ return n<=2?14.99:n<=5?10.99:9.99; }
+  function money(n){ return '£'+n.toFixed(2); }
+  function update(){
+    var n=parseInt(input.value,10);
+    if(!n||n<1){ out.textContent='Enter the number of properties to see your monthly total.'; return; }
+    if(n>99){ n=99; input.value='99'; }
+    var r=rate(n);
+    var total=Math.round(n*r*100)/100;
+    var noun=n===1?'property':'properties';
+    out.textContent=n+' '+noun+' at '+money(r)+' each is '+money(total)+' a month.';
+  }
+  input.addEventListener('input',update);
+  input.addEventListener('change',update);
+  update();
+})();
+</script>
 </body>
 </html>
