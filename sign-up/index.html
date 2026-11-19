@@ -132,6 +132,11 @@ input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);ou
   .btn{width:100%}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.next{margin:8px 0 20px;padding:16px 16px 14px;background:#eef6fc;border-left:4px solid var(--sky);border-radius:10px;text-align:left}
+.next h2{margin:0 0 6px;font-size:1.08rem;letter-spacing:-.01em}
+.next p{margin:0;color:#2b3340;font-size:.98rem;line-height:1.5}
+#thanks h2{font-size:1.45rem;margin:0 0 10px;letter-spacing:-.02em}
+#thanks p+p{margin-top:10px}
 </style>
 </head>
 <body>
@@ -252,21 +257,27 @@ input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);ou
         </div>
 
         <p class="note">You don't need to send your EPC, as we'll look it up on the public register. Not sure of a date? Leave it blank.</p>
+        <div class="next">
+          <h2>What happens next</h2>
+          <p>We will confirm your sign-up by email, then send you the monthly standing order details. You pay £15 per property per month to the Property Nudge Ltd account, with 30 days' notice, and you can cancel at any time. The account details will be in that email, not on this page.</p>
+        </div>
         <button class="btn" type="submit">Sign up</button>
       </form>
 
       <div id="thanks" hidden>
         <div class="tick" aria-hidden="true">&#10003;</div>
-        <p>Thank you for signing up to Property Nudge. We'll be in touch shortly to confirm your reminders.</p>
+        <h2>Thank you for signing up to Property Nudge.</h2>
+        <p>We will confirm your sign-up by email, then send you the monthly standing order details. You pay £15 per property per month to the Property Nudge Ltd account, with 30 days' notice, and you can cancel at any time. The account details will be in that email, not on this page.</p>
       </div>
     </div>
   </div>
 </main>
 
 <footer><div class="wrap">
-<p class="flinks"><a href="/how-it-works/">How it works</a> &middot; <a href="/pricing/">Pricing</a> &middot; <a href="/guides/">Guides</a> &middot; <a href="/free-check/">Free compliance check</a> &middot; <a href="/events/">Local landlord events</a> &middot; <a href="/#savings">Savings</a> &middot; <a href="/#cost">Risks</a> &middot; <a href="/newsletter/">Newsletter</a> &middot; <a href="/about/">About</a></p>
+<p class="flinks"><a href="/how-it-works/">How it works</a> &middot; <a href="/pricing/">Pricing</a> &middot; <a href="/guides/">Guides</a> &middot; <a href="/free-check/">Free compliance check</a> &middot; <a href="/events/">Local landlord events</a> &middot; <a href="/pricing/#savings">Savings</a> &middot; <a href="/pricing/#cost">Risks</a> &middot; <a href="/newsletter/">Newsletter</a> &middot; <a href="/about/">About</a></p>
 <p><a href="/privacy/">Privacy</a></p>
 <p>Property Nudge. Self manage with confidence.</p>
+<p>Property Nudge Ltd, registered in England and Wales, company number 17565393.</p>
 </div></footer>
 
 <script>
