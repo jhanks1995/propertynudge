@@ -24,7 +24,7 @@ body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF 
 h1,h2{font-weight:700;letter-spacing:-.035em;line-height:1.05;margin:0}
 h1{font-size:clamp(2rem,5vw,3rem);font-weight:800}
 a{color:var(--deep)}
-a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--pale);outline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--pale);outline-offset:3px}
 .grad{background:linear-gradient(100deg,#2f86c8 0%,#44A6E3 55%,#7cc4f0 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .lead{font-size:clamp(1.05rem,2vw,1.22rem);color:var(--muted);margin:14px auto 0;font-weight:400;max-width:36em}
 .bar{position:sticky;top:0;z-index:10;background:rgba(251,252,254,.72);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid var(--line)}
@@ -48,11 +48,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 footer{background:#0b1018;color:#aebccb;font-size:.88rem;padding:36px 0;text-align:center}
 footer p{max-width:620px;margin:0 auto 10px}
 footer a{color:var(--pale)}
-/* left logo menu */
 .bar .in{flex-direction:row!important;justify-content:space-between!important;max-width:1080px;padding:6px 20px!important}
 .bar .home img{height:50px!important;width:50px!important;object-fit:contain}
 .bar .r{justify-content:flex-end}
-/* phone dropdown menu */
 .bar .menubtn{display:none}
 @media(max-width:720px){
   .bar{position:sticky}
@@ -72,7 +70,6 @@ footer a{color:var(--pale)}
   .bar a.nl{order:0!important;flex:none!important;justify-content:flex-start;font-size:1.05rem!important;min-height:52px;padding:0 4px!important;border-bottom:1px solid var(--line);border-radius:0;white-space:normal}
   .bar a.mini{order:0!important;margin:16px 0 0!important;justify-content:center;min-height:50px;font-size:1.02rem!important;padding:10px 20px!important}
 }
-/* page */
 body{background:linear-gradient(180deg,#e8f3fb 0%,#f4f9fd 42%,#eef6fc 100%)}
 .signup{position:relative;overflow:hidden;padding:48px 0 80px}
 .orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;pointer-events:none;z-index:0}
@@ -83,41 +80,22 @@ body{background:linear-gradient(180deg,#e8f3fb 0%,#f4f9fd 42%,#eef6fc 100%)}
 .formcard{background:#fff;border-radius:22px;padding:36px 32px 40px;text-align:left;box-shadow:0 0 0 1px var(--line),0 2px 4px rgba(15,23,32,.03),0 18px 40px -16px rgba(31,120,189,.22)}
 .formlogo{width:min(260px,70%);height:auto;display:block;margin:0 auto 18px}
 .formcard h1{text-align:center}
-.formcard .lead{text-align:center;margin-bottom:28px}
-.group{margin:0 0 22px;padding:0;border:0}
-.group-title{display:block;font-weight:700;font-size:1.05rem;letter-spacing:-.01em;margin:0 0 12px;color:var(--navy)}
+.formcard .lead{text-align:center;margin-bottom:12px}
+.formcard .lead-sub{text-align:center;margin:0 auto 28px;color:var(--muted);font-size:1.02rem;max-width:32em}
 .field{margin:0 0 16px}
-.field label,.choice{display:block;font-weight:600;font-size:.95rem;margin:0 0 6px;color:var(--navy)}
+.field label{display:block;font-weight:600;font-size:.95rem;margin:0 0 6px;color:var(--navy)}
 .req{color:var(--deep);font-weight:700}
-.hint{display:block;font-weight:400;color:var(--muted);font-size:.88rem;margin-top:2px}
-.formcard,.signup .wrap,.group,.field,.row2,.row2 > *{min-width:0;max-width:100%}
+.formcard,.signup .wrap,.field{min-width:0;max-width:100%}
 input{box-sizing:border-box}
-input[type=text],input[type=email],input[type=tel],input[type=date]{
+input[type=text],input[type=email],input[type=tel]{
   display:block;width:100%;max-width:100%;min-width:0;box-sizing:border-box;
   min-height:48px;padding:12px 14px;border:1px solid #d5dee8;border-radius:12px;
   font:inherit;font-size:1rem;color:var(--ink);background:#fff;
   box-shadow:inset 0 1px 2px rgba(15,23,32,.04)
 }
-input[type=date]{
-  -webkit-appearance:none;appearance:none;
-  line-height:1.25;text-align:left;color:var(--ink)
-}
-input[type=date]::-webkit-date-and-time-value{text-align:left;min-height:1.25em;margin:0}
-input[type=date]::-webkit-datetime-edit,input[type=date]::-webkit-datetime-edit-fields-wrapper{min-width:0;padding:0}
-input[type=date]::-webkit-calendar-picker-indicator{cursor:pointer;opacity:.7;margin-left:auto}
-input[type=date].is-empty::-webkit-datetime-edit,
-input[type=date].is-empty::-webkit-date-and-time-value{color:transparent}
-input[type=date].is-empty::before{content:attr(placeholder);color:#8a93a3}
-input[type=date]:focus::before,input[type=date]:not(.is-empty)::before{content:none}
 input::placeholder{color:#8a93a3}
 input:hover{border-color:#b9c9d8}
 input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);outline:none}
-.row2{display:grid;grid-template-columns:1.3fr .9fr;gap:14px;min-width:0}
-.choices{display:flex;flex-direction:column;gap:8px}
-.choices label{display:flex;align-items:flex-start;gap:10px;margin:0;font-weight:500;font-size:1rem;padding:12px 14px;border:1px solid #d5dee8;border-radius:12px;cursor:pointer;background:#fff;min-height:48px}
-.choices label:hover{border-color:var(--sky);background:#f7fbfe}
-.choices input{margin-top:4px;accent-color:var(--deep);width:18px;height:18px;flex:none}
-.choices label:has(input:checked){border-color:var(--deep);background:#eef6fc;box-shadow:0 0 0 1px var(--deep)}
 .consent{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border:1px solid #d5dee8;border-radius:14px;background:#f7fbfe;font-size:.98rem;color:#2b3340}
 .consent input{margin-top:4px;accent-color:var(--deep);width:20px;height:20px;flex:none}
 .note{color:var(--muted);font-size:.95rem;margin:8px 0 20px;padding:12px 14px;background:#eef6fc;border-left:4px solid var(--sky);border-radius:10px}
@@ -128,7 +106,6 @@ input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);ou
 @media(max-width:640px){
   .signup{padding:28px 0 56px}
   .formcard{padding:26px 18px 32px;border-radius:18px}
-  .row2{grid-template-columns:1fr}
   .btn{width:100%}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -152,6 +129,7 @@ input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);ou
       <img class="formlogo" src="/logo.svg" alt="Property Nudge">
       <h1>Sign up to <span class="grad">Property Nudge</span></h1>
       <p class="lead">Self manage with confidence. £14.99 per property, per month, less for 3 or more, with no long contract.</p>
+      <p class="lead-sub">Just your name, phone number and email to get started. We'll email you afterwards to collect your property details.</p>
 
       <form id="signup-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfgqYozNFGDo44-WiTDXIgLRdg5vMlIh2KDe4ORGlcF9bWWaQ/formResponse" method="post" novalidate>
         <div class="field">
@@ -167,99 +145,17 @@ input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);ou
           <input id="phone" name="entry.2008498533" type="tel" autocomplete="tel" required placeholder="Phone number">
         </div>
 
-        <fieldset class="group">
-          <legend class="group-title">Property address</legend>
-          <div class="field">
-            <label for="address1">Address line 1 <span class="req" aria-hidden="true">*</span></label>
-            <input id="address1" name="entry.1226919022" type="text" autocomplete="address-line1" required placeholder="Address line 1">
-          </div>
-          <div class="field">
-            <label for="address2">Address line 2</label>
-            <input id="address2" name="entry.2024147045" type="text" autocomplete="address-line2" placeholder="Address line 2">
-          </div>
-          <div class="row2">
-            <div class="field">
-              <label for="town">Town or city <span class="req" aria-hidden="true">*</span></label>
-              <input id="town" name="entry.659011594" type="text" autocomplete="address-level2" required placeholder="Town or city">
-            </div>
-            <div class="field">
-              <label for="postcode">Postcode <span class="req" aria-hidden="true">*</span></label>
-              <input id="postcode" name="entry.1972798812" type="text" autocomplete="postal-code" required placeholder="Postcode">
-            </div>
-          </div>
-        </fieldset>
-
-        <div class="field">
-          <label for="tenancy">Tenancy start date</label>
-          <input id="tenancy" name="tenancy-date" type="date" autocomplete="off" placeholder="dd/mm/yyyy">
-        </div>
-
-        <fieldset class="group">
-          <legend class="group-title">Is there gas at the property? <span class="req" aria-hidden="true">*</span></legend>
-          <div class="choices" id="gas-choices">
-            <label><input type="radio" name="entry.886049955" value="Yes" required> Yes</label>
-            <label><input type="radio" name="entry.886049955" value="No" required> No</label>
-            <label><input type="radio" name="entry.886049955" value="Not sure" required> Not sure</label>
-          </div>
-        </fieldset>
-        <div class="field" id="gas-expiry-wrap" hidden>
-          <label for="gas-expiry">Gas safety certificate expiry date</label>
-          <input id="gas-expiry" name="gas-expiry-date" type="date" placeholder="dd/mm/yyyy">
-        </div>
-
-        <div class="field">
-          <label for="eicr">EICR date</label>
-          <input id="eicr" name="eicr-date" type="date" placeholder="dd/mm/yyyy">
-        </div>
-        <div class="field">
-          <label for="alarms">Last smoke and CO alarm check</label>
-          <input id="alarms" name="alarms-date" type="date" placeholder="dd/mm/yyyy">
-        </div>
-        <div class="field">
-          <label for="legionella">Last legionella risk review (if known)</label>
-          <input id="legionella" name="legionella-date" type="date" placeholder="dd/mm/yyyy">
-        </div>
-
-        <fieldset class="group">
-          <legend class="group-title">Is the deposit protected?</legend>
-          <div class="choices">
-            <label><input type="radio" name="entry.1869458727" value="Yes, DPS"> Yes, DPS</label>
-            <label><input type="radio" name="entry.1869458727" value="Yes, TDS"> Yes, TDS</label>
-            <label><input type="radio" name="entry.1869458727" value="Yes, mydeposits"> Yes, mydeposits</label>
-            <label><input type="radio" name="entry.1869458727" value="No deposit taken"> No deposit taken</label>
-            <label><input type="radio" name="entry.1869458727" value="Not sure"> Not sure</label>
-          </div>
-        </fieldset>
-
-        <div class="field">
-          <label for="rtr">Right to Rent check date</label>
-          <input id="rtr" name="rtr-date" type="date" placeholder="dd/mm/yyyy">
-        </div>
-
-        <fieldset class="group">
-          <legend class="group-title">More than one property?</legend>
-          <div class="choices">
-            <label><input type="radio" name="entry.1002058204" value="No, just this one"> No, just this one</label>
-            <label><input type="radio" name="entry.1002058204" value="Yes, I'll add the others by email"> Yes, I'll add the others by email</label>
-          </div>
-        </fieldset>
-
-        <div class="field">
-          <label for="heard">How did you hear about us?</label>
-          <input id="heard" name="entry.1147983767" type="text" placeholder="How did you hear about us?">
-        </div>
-
         <div class="field">
           <label class="consent">
-            <input id="consent" type="checkbox" name="entry.769748946" value="I agree that Property Nudge can store these details to send me compliance reminders, as set out in the privacy notice at propertynudge.uk/privacy/." required>
-            <span>I agree that Property Nudge can store these details to send me compliance reminders, as set out in the <a href="/privacy/">privacy notice</a> at propertynudge.uk/privacy/. <span class="req" aria-hidden="true">*</span></span>
+            <input id="consent" type="checkbox" name="entry.769748946" value="I agree that Property Nudge can store my name, email address and phone number, and the property details I send later, to provide the service and send me compliance messages, as set out in the privacy notice at propertynudge.uk/privacy/." required>
+            <span>I agree that Property Nudge can store my name, email address and phone number, and the property details I send later, to provide the service and send me compliance messages, as set out in the <a href="/privacy/">privacy notice</a> at propertynudge.uk/privacy/. <span class="req" aria-hidden="true">*</span></span>
           </label>
         </div>
 
-        <p class="note">You don't need to send your EPC, as we'll look it up on the public register. Not sure of a date? Leave it blank.</p>
+        <p class="note">We use your phone number only as a contact detail for your account, not for marketing calls or texts.</p>
         <div class="next">
           <h2>What happens next</h2>
-          <p>We will confirm your sign-up by email, then send you the monthly standing order details. You pay £14.99 per property, per month, dropping to £10.99 for 3 to 5 properties and £9.99 for 6 or more, to the Property Nudge Ltd account, with 30 days' notice, and you can cancel at any time. Full rates are on the <a href="/pricing/">pricing</a> page. The account details will be in that email, not on this page.</p>
+          <p>We'll email you shortly with a short form to collect your property details, including addresses and certificate dates. You don't need to send your EPC, as we'll look it up on the public register. After that, we'll send you the monthly standing order details. You pay £14.99 per property, per month, dropping to £10.99 for 3 to 5 properties and £9.99 for 6 or more, to the Property Nudge Ltd account, with 30 days' notice, and you can cancel at any time. Full rates are on the <a href="/pricing/">pricing</a> page. The account details will be in that later email, not on this page.</p>
         </div>
         <button class="btn" type="submit">Sign up</button>
       </form>
@@ -267,7 +163,7 @@ input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);ou
       <div id="thanks" hidden>
         <div class="tick" aria-hidden="true">&#10003;</div>
         <h2>Thank you for signing up to Property Nudge.</h2>
-        <p>We will confirm your sign-up by email, then send you the monthly standing order details. You pay £14.99 per property, per month, dropping to £10.99 for 3 to 5 properties and £9.99 for 6 or more, to the Property Nudge Ltd account, with 30 days' notice, and you can cancel at any time. Full rates are on the <a href="/pricing/">pricing</a> page. The account details will be in that email, not on this page.</p>
+        <p>We'll email you shortly with a short form to collect your property details. After that, we'll send you the monthly standing order details. You pay £14.99 per property, per month, dropping to £10.99 for 3 to 5 properties and £9.99 for 6 or more, to the Property Nudge Ltd account, with 30 days' notice, and you can cancel at any time. Full rates are on the <a href="/pricing/">pricing</a> page. The account details will be in that later email, not on this page.</p>
       </div>
     </div>
   </div>
@@ -283,53 +179,14 @@ input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);ou
 <script>
 (function () {
   var FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSfgqYozNFGDo44-WiTDXIgLRdg5vMlIh2KDe4ORGlcF9bWWaQ/formResponse";
-  var DATE_FIELDS = [
-    { input: "tenancy", entry: "662679381" },
-    { input: "gas-expiry", entry: "1575271381" },
-    { input: "eicr", entry: "1011082766" },
-    { input: "alarms", entry: "321601352" },
-    { input: "legionella", entry: "2119920877" },
-    { input: "rtr", entry: "584732194" }
-  ];
   var form = document.getElementById("signup-form");
   var thanks = document.getElementById("thanks");
-  var gasWrap = document.getElementById("gas-expiry-wrap");
-  var gasExpiry = document.getElementById("gas-expiry");
-
-  function syncDateHint(el) {
-    if (!el) return;
-    el.classList.toggle("is-empty", !el.value);
-  }
-  form.querySelectorAll('input[type="date"]').forEach(function (el) {
-    syncDateHint(el);
-    el.addEventListener("input", function () { syncDateHint(el); });
-    el.addEventListener("change", function () { syncDateHint(el); });
-    el.addEventListener("blur", function () { syncDateHint(el); });
-  });
-  function selectedGas() {
-    var picked = form.querySelector('input[name="entry.886049955"]:checked');
-    return picked ? picked.value : "";
-  }
-  function syncGas() {
-    var show = selectedGas() === "Yes";
-    gasWrap.hidden = !show;
-    if (!show) gasExpiry.value = "";
-    syncDateHint(gasExpiry);
-  }
-  form.querySelectorAll('input[name="entry.886049955"]').forEach(function (el) {
-    el.addEventListener("change", syncGas);
-  });
-  syncGas();
-
-  function appendDate(params, entryId, value) {
-    if (!value) return;
-    var parts = value.split("-");
-    if (parts.length !== 3) return;
-    params.append("entry." + entryId + "_year", String(Number(parts[0])));
-    params.append("entry." + entryId + "_month", String(Number(parts[1])));
-    params.append("entry." + entryId + "_day", String(Number(parts[2])));
-  }
-
+  var named = [
+    "entry.1519497386",
+    "entry.856669323",
+    "entry.2008498533",
+    "entry.769748946"
+  ];
   form.addEventListener("submit", function (event) {
     event.preventDefault();
     if (!form.checkValidity()) {
@@ -339,34 +196,12 @@ input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);ou
     var params = new URLSearchParams();
     params.append("fvv", "1");
     params.append("pageHistory", "0");
-    var named = [
-      "entry.1519497386",
-      "entry.856669323",
-      "entry.2008498533",
-      "entry.1226919022",
-      "entry.2024147045",
-      "entry.659011594",
-      "entry.1972798812",
-      "entry.886049955",
-      "entry.1869458727",
-      "entry.1002058204",
-      "entry.1147983767",
-      "entry.769748946"
-    ];
     named.forEach(function (name) {
       var node = form.elements[name];
       if (!node) return;
-      var value = node instanceof RadioNodeList
-        ? (form.querySelector('input[name="' + name + '"]:checked') || {}).value
-        : (node.type === "checkbox" ? (node.checked ? node.value : "") : node.value);
+      var value = node.type === "checkbox" ? (node.checked ? node.value : "") : node.value;
       if (value && String(value).trim()) params.append(name, String(value).trim());
     });
-    DATE_FIELDS.forEach(function (field) {
-      var input = document.getElementById(field.input);
-      if (field.input === "gas-expiry" && selectedGas() !== "Yes") return;
-      if (input && input.value) appendDate(params, field.entry, input.value);
-    });
-
     var btn = form.querySelector('button[type="submit"]');
     btn.disabled = true;
     fetch(FORM_ACTION, {
