@@ -107,13 +107,15 @@ input[type=date]:focus::before,input[type=date]:not(.is-empty)::before{content:n
 input::placeholder{color:#8a93a3}
 input:hover{border-color:#b9c9d8}
 input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);outline:none}
-.row2{display:grid;grid-template-columns:1.3fr .9fr;gap:14px;min-width:0}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px;min-width:0}
 .choices{display:flex;flex-direction:column;gap:8px}
 .choices label{display:flex;align-items:flex-start;gap:10px;margin:0;font-weight:500;font-size:1rem;padding:12px 14px;border:1px solid #d5dee8;border-radius:12px;cursor:pointer;background:#fff;min-height:48px}
 .choices label:hover{border-color:var(--sky);background:#f7fbfe}
 .choices input{margin-top:4px;accent-color:var(--deep);width:18px;height:18px;flex:none}
 .choices label:has(input:checked){border-color:var(--deep);background:#eef6fc;box-shadow:0 0 0 1px var(--deep)}
-.note{color:var(--muted);font-size:.95rem;margin:8px 0 20px;padding:12px 14px;background:#eef6fc;border-left:4px solid var(--sky);border-radius:10px}
+.consent{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border:1px solid #d5dee8;border-radius:14px;background:#f7fbfe;font-size:.98rem;color:#2b3340;font-weight:500}
+.consent input{margin-top:4px;accent-color:var(--deep);width:20px;height:20px;flex:none}
+.note{color:var(--muted);font-size:.95rem;margin:8px 0 16px;padding:12px 14px;background:#eef6fc;border-left:4px solid var(--sky);border-radius:10px}
 .formcard .btn{width:100%;margin-top:4px;font-size:1.12rem;min-height:56px}
 #thanks{text-align:center;padding:18px 8px 8px}
 #thanks .tick{width:64px;height:64px;border-radius:50%;background:linear-gradient(180deg,#4fb0ea,#2f8fd3);color:#fff;display:grid;place-items:center;margin:0 auto 18px;font-size:1.8rem;box-shadow:0 8px 24px -8px rgba(47,134,200,.6)}
@@ -141,18 +143,49 @@ input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);ou
     <div class="formcard">
       <img class="formlogo" src="/logo.svg" alt="Property Nudge">
       <h1>Your <span class="grad">property details</span></h1>
-      <p class="lead">Please complete this form once for each property you want us to look after. If you are not sure of a date, leave it blank.</p>
+      <p class="lead">Please complete this form once for each property you want us to look after. If you are not sure of a date, leave it blank and we will help you find it.</p>
 
       <form id="details-form" action="https://docs.google.com/forms/d/e/1FAIpQLScxDylyhqrnmmECbAUS9CPViZxzSKCjxD3EUmXk0u-Caj5XZg/formResponse" method="post" novalidate>
         <div class="field">
           <label for="email">Email (the one you used to sign up) <span class="req" aria-hidden="true">*</span></label>
           <input id="email" name="entry.1670768445" type="email" autocomplete="email" required placeholder="Email">
         </div>
-
         <div class="field">
           <label for="property-count">How many properties are you signing up? <span class="req" aria-hidden="true">*</span></label>
           <input id="property-count" name="entry.1643584877" type="number" min="1" step="1" inputmode="numeric" required placeholder="Number of properties">
         </div>
+
+        <fieldset class="group">
+          <legend class="group-title">Property address</legend>
+          <div class="row2">
+            <div class="field">
+              <label for="house">House number or name <span class="req" aria-hidden="true">*</span></label>
+              <input id="house" name="entry.2093419932" type="text" required placeholder="House number or name">
+            </div>
+            <div class="field">
+              <label for="flat">Flat number (if any)</label>
+              <input id="flat" name="entry.1694150138" type="text" placeholder="Flat number">
+            </div>
+          </div>
+          <div class="field">
+            <label for="street">Street <span class="req" aria-hidden="true">*</span></label>
+            <input id="street" name="entry.30482072" type="text" required placeholder="Street">
+          </div>
+          <div class="row2">
+            <div class="field">
+              <label for="town">Town or city <span class="req" aria-hidden="true">*</span></label>
+              <input id="town" name="entry.364614866" type="text" autocomplete="address-level2" required placeholder="Town or city">
+            </div>
+            <div class="field">
+              <label for="county">County</label>
+              <input id="county" name="entry.1144980309" type="text" placeholder="County (optional)">
+            </div>
+          </div>
+          <div class="field">
+            <label for="postcode">Full postcode <span class="req" aria-hidden="true">*</span></label>
+            <input id="postcode" name="entry.408606792" type="text" autocomplete="postal-code" required placeholder="Full postcode">
+          </div>
+        </fieldset>
 
         <fieldset class="group">
           <legend class="group-title">Property type <span class="req" aria-hidden="true">*</span></legend>
@@ -163,25 +196,53 @@ input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);ou
             <label><input type="radio" name="entry.1101444881" value="Other" required> Other</label>
           </div>
         </fieldset>
+        <div class="field">
+          <label for="bedrooms">Number of bedrooms</label>
+          <input id="bedrooms" name="entry.1161090770" type="number" min="0" step="1" inputmode="numeric" placeholder="Number of bedrooms">
+        </div>
 
         <fieldset class="group">
-          <legend class="group-title">Property address</legend>
-          <div class="field">
-            <label for="address1">Address line 1 <span class="req" aria-hidden="true">*</span></label>
-            <input id="address1" name="entry.744362753" type="text" autocomplete="address-line1" required placeholder="Address line 1">
+          <legend class="group-title">Does this property need a licence (for example an HMO or selective licence)? <span class="req" aria-hidden="true">*</span></legend>
+          <div class="choices" id="licence-choices">
+            <label><input type="radio" name="entry.417544048" value="Yes" required> Yes</label>
+            <label><input type="radio" name="entry.417544048" value="No" required> No</label>
+            <label><input type="radio" name="entry.417544048" value="Not sure" required> Not sure</label>
           </div>
-          <div class="field">
-            <label for="address2">Address line 2</label>
-            <input id="address2" name="entry.1669868806" type="text" autocomplete="address-line2" placeholder="Address line 2">
+        </fieldset>
+        <div class="field" id="licence-expiry-wrap" hidden>
+          <label for="licence-expiry">Licence expiry date</label>
+          <input id="licence-expiry" name="licence-expiry-date" type="date" placeholder="dd/mm/yyyy">
+        </div>
+
+        <fieldset class="group" id="agent-section">
+          <legend class="group-title">Does a letting or managing agent hold these details? <span class="req" aria-hidden="true">*</span></legend>
+          <div class="choices" id="agent-choices">
+            <label><input type="radio" name="entry.709013468" value="Yes, please contact my agent" required> Yes, please contact my agent</label>
+            <label><input type="radio" name="entry.709013468" value="No" required> No</label>
           </div>
-          <div class="row2">
+          <div id="agent-fields" hidden>
+            <p class="note">You can leave the certificate dates below blank. We will collect them from your agent.</p>
             <div class="field">
-              <label for="town">Town or city <span class="req" aria-hidden="true">*</span></label>
-              <input id="town" name="entry.364614866" type="text" autocomplete="address-level2" required placeholder="Town or city">
+              <label for="agency">Agent or agency name <span class="req" aria-hidden="true">*</span></label>
+              <input id="agency" name="entry.725871911" type="text" placeholder="Agent or agency name">
             </div>
             <div class="field">
-              <label for="postcode">Postcode <span class="req" aria-hidden="true">*</span></label>
-              <input id="postcode" name="entry.408606792" type="text" autocomplete="postal-code" required placeholder="Postcode">
+              <label for="agent-contact">Agent contact name</label>
+              <input id="agent-contact" name="entry.1608893628" type="text" placeholder="Agent contact name">
+            </div>
+            <div class="field">
+              <label for="agent-email">Agent email <span class="req" aria-hidden="true">*</span></label>
+              <input id="agent-email" name="entry.1588620588" type="email" placeholder="Agent email">
+            </div>
+            <div class="field">
+              <label for="agent-phone">Agent phone</label>
+              <input id="agent-phone" name="entry.94675170" type="tel" placeholder="Agent phone (optional)">
+            </div>
+            <div class="field">
+              <label class="consent">
+                <input id="agent-consent" type="checkbox" name="entry.68906999" value="I give Property Nudge permission to contact my agent to request the compliance documents and dates for this property.">
+                <span>I give Property Nudge permission to contact my agent to request the compliance documents and dates for this property. <span class="req" aria-hidden="true">*</span></span>
+              </label>
             </div>
           </div>
         </fieldset>
@@ -227,6 +288,10 @@ input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);ou
             <label><input type="radio" name="entry.1822707471" value="Not sure"> Not sure</label>
           </div>
         </fieldset>
+        <div class="field">
+          <label for="deposit-ref">Deposit protection reference (if known)</label>
+          <input id="deposit-ref" name="entry.438438160" type="text" placeholder="Deposit protection reference">
+        </div>
 
         <div class="field">
           <label for="rtr">Right to Rent check date</label>
@@ -238,7 +303,7 @@ input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);ou
           <input id="heard" name="entry.566186334" type="text" placeholder="How did you hear about us?">
         </div>
 
-        <p class="note">You don't need to send your EPC, as we'll look it up on the public register. Not sure of a date? Leave it blank. If you have more than one property, submit this form once for each one.</p>
+        <p class="note">You don't need to send your EPC, as we'll look it up on the public register. Not sure of a date? Leave it blank, and we will help you find it.</p>
         <button class="btn" type="submit">Send property details</button>
       </form>
 
@@ -262,6 +327,7 @@ input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);ou
 (function () {
   var FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLScxDylyhqrnmmECbAUS9CPViZxzSKCjxD3EUmXk0u-Caj5XZg/formResponse";
   var DATE_FIELDS = [
+    { input: "licence-expiry", entry: "2003236078" },
     { input: "tenancy", entry: "453487768" },
     { input: "gas-expiry", entry: "2110507805" },
     { input: "eicr", entry: "851919669" },
@@ -272,13 +338,24 @@ input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);ou
   var named = [
     "entry.1670768445",
     "entry.1643584877",
-    "entry.1101444881",
-    "entry.744362753",
-    "entry.1669868806",
+    "entry.2093419932",
+    "entry.1694150138",
+    "entry.30482072",
     "entry.364614866",
+    "entry.1144980309",
     "entry.408606792",
+    "entry.1101444881",
+    "entry.1161090770",
+    "entry.417544048",
+    "entry.709013468",
+    "entry.725871911",
+    "entry.1608893628",
+    "entry.1588620588",
+    "entry.94675170",
+    "entry.68906999",
     "entry.2842438",
     "entry.1822707471",
+    "entry.438438160",
     "entry.566186334"
   ];
 
@@ -286,6 +363,12 @@ input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);ou
   var thanks = document.getElementById("thanks");
   var gasWrap = document.getElementById("gas-expiry-wrap");
   var gasExpiry = document.getElementById("gas-expiry");
+  var licenceWrap = document.getElementById("licence-expiry-wrap");
+  var licenceExpiry = document.getElementById("licence-expiry");
+  var agentFields = document.getElementById("agent-fields");
+  var agency = document.getElementById("agency");
+  var agentEmail = document.getElementById("agent-email");
+  var agentConsent = document.getElementById("agent-consent");
 
   var prefill = new URLSearchParams(window.location.search).get("email");
   if (prefill) {
@@ -300,20 +383,49 @@ input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);ou
     sync();
   });
 
-  function selectedGas() {
-    var picked = form.querySelector('input[name="entry.2842438"]:checked');
+  function selectedValue(name) {
+    var picked = form.querySelector('input[name="' + name + '"]:checked');
     return picked ? picked.value : "";
   }
+  function selectedGas() { return selectedValue("entry.2842438"); }
+  function selectedLicence() { return selectedValue("entry.417544048"); }
+  function selectedAgent() { return selectedValue("entry.709013468"); }
+
+  function syncDateEmpty(el) { el.classList.toggle("is-empty", !el.value); }
+
   function syncGas() {
     var show = selectedGas() === "Yes";
     gasWrap.hidden = !show;
     if (!show) gasExpiry.value = "";
-    gasExpiry.classList.toggle("is-empty", !gasExpiry.value);
+    syncDateEmpty(gasExpiry);
   }
-  form.querySelectorAll('input[name="entry.2842438"]').forEach(function (el) {
-    el.addEventListener("change", syncGas);
-  });
+  function syncLicence() {
+    var show = selectedLicence() === "Yes";
+    licenceWrap.hidden = !show;
+    if (!show) licenceExpiry.value = "";
+    syncDateEmpty(licenceExpiry);
+  }
+  function syncAgent() {
+    var yes = selectedAgent() === "Yes, please contact my agent";
+    agentFields.hidden = !yes;
+    agency.required = yes;
+    agentEmail.required = yes;
+    agentConsent.required = yes;
+    if (!yes) {
+      agency.value = "";
+      document.getElementById("agent-contact").value = "";
+      agentEmail.value = "";
+      document.getElementById("agent-phone").value = "";
+      agentConsent.checked = false;
+    }
+  }
+
+  form.querySelectorAll('input[name="entry.2842438"]').forEach(function (el) { el.addEventListener("change", syncGas); });
+  form.querySelectorAll('input[name="entry.417544048"]').forEach(function (el) { el.addEventListener("change", syncLicence); });
+  form.querySelectorAll('input[name="entry.709013468"]').forEach(function (el) { el.addEventListener("change", syncAgent); });
   syncGas();
+  syncLicence();
+  syncAgent();
 
   function appendDate(params, entryId, value) {
     var parts = String(value).split("-");
@@ -343,6 +455,7 @@ input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(68,166,227,.25);ou
     DATE_FIELDS.forEach(function (field) {
       var input = document.getElementById(field.input);
       if (field.input === "gas-expiry" && selectedGas() !== "Yes") return;
+      if (field.input === "licence-expiry" && selectedLicence() !== "Yes") return;
       if (input && input.value) appendDate(params, field.entry, input.value);
     });
     var btn = form.querySelector('button[type="submit"]');
